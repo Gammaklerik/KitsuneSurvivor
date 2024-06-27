@@ -1,0 +1,7 @@
+res://Test.tscn
+res://Scripts/Player_Movement.gd
+res://Scenes/player.tscn
+res://Scenes/kamaitachi_melee.tscn
+res://Scenes/melee_enemy.tscn
+res://Scripts/melee_enemy_logic.gd
+res://Scripts/player_movement.gd

@@ -1,3 +1,14 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1719500735
+::res://::1719503622
 icon.svg::CompressedTexture2D::725105584831926668::1719500724::1719500737::1::::<><>::
+Test.tscn::PackedScene::5233349977111371929::1719503573::0::1::::<><>::uid://dhrc1dhlir8y3::::res://Scenes/player.tscn<>uid://bggqc0h64vf4d::::res://Scenes/melee_enemy.tscn
+::res://Assets/::1719503240
+::res://Assets/Sprites/::1719503240
+placeholder_enemy.png::CompressedTexture2D::7651685281598957998::1719503231::1719503240::1::::<><>::
+placeholder_player.png::CompressedTexture2D::5897411572965648806::1719501231::1719503163::1::::<><>::
+::res://Scenes/::1719503622
+melee_enemy.tscn::PackedScene::2820916380863195785::1719503543::0::1::::<><>::uid://dhaseyj88w6l3::::res://Assets/Sprites/placeholder_enemy.png
+player.tscn::PackedScene::7685846411886475128::1719503630::0::1::::<><>::res://Scripts/Player_Movement.gd<>uid://cqa0ricre6gyg::::res://Assets/Sprites/placeholder_player.png
+::res://Scripts/::1719503622
+melee_enemy_logic.gd::GDScript::-1::1719503618::0::1::::<>Area2D<>::
+Player_Movement.gd::GDScript::-1::1719502954::0::1::::<>CharacterBody2D<>::

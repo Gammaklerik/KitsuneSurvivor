@@ -1,0 +1,50 @@
+[gd_scene load_steps=3 format=3 uid="uid://cgtcrlahj0mqr"]
+
+[ext_resource type="PackedScene" uid="uid://dhrc1dhlir8y3" path="res://Scenes/player.tscn" id="1_apeqk"]
+[ext_resource type="PackedScene" uid="uid://bm4kkgpiyovih" path="res://Scenes/melee_enemy.tscn" id="2_npoxy"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Player_Body" parent="." instance=ExtResource("1_apeqk")]
+
+[node name="enemy" parent="." instance=ExtResource("2_npoxy")]
+position = Vector2(228, 178)
+
+[node name="enemy2" parent="." instance=ExtResource("2_npoxy")]
+position = Vector2(118, 76)
+
+[node name="enemy3" parent="." instance=ExtResource("2_npoxy")]
+position = Vector2(61, 119)
+
+[node name="enemy4" parent="." instance=ExtResource("2_npoxy")]
+position = Vector2(184, 59)
+
+[node name="enemy5" parent="." instance=ExtResource("2_npoxy")]
+position = Vector2(330, 431)
+
+[node name="enemy6" parent="." instance=ExtResource("2_npoxy")]
+position = Vector2(165, -49)
+
+[node name="enemy7" parent="." instance=ExtResource("2_npoxy")]
+position = Vector2(57, 201)
+
+[node name="enemy8" parent="." instance=ExtResource("2_npoxy")]
+position = Vector2(83, 33)
+
+[node name="enemy9" parent="." instance=ExtResource("2_npoxy")]
+position = Vector2(26, 68)
+
+[node name="enemy10" parent="." instance=ExtResource("2_npoxy")]
+position = Vector2(128, 347)
+
+[node name="enemy11" parent="." instance=ExtResource("2_npoxy")]
+position = Vector2(98, 247)
+
+[node name="enemy12" parent="." instance=ExtResource("2_npoxy")]
+position = Vector2(413, 358)
+
+[node name="enemy13" parent="." instance=ExtResource("2_npoxy")]
+position = Vector2(269, 299)
+
+[node name="enemy14" parent="." instance=ExtResource("2_npoxy")]
+position = Vector2(157, 277)
