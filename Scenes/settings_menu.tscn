@@ -1,0 +1,295 @@
+[gd_scene load_steps=16 format=3 uid="uid://dlv1hls6efv3m"]
+
+[ext_resource type="Script" path="res://Scripts/settings_menu.gd" id="1_dtto3"]
+[ext_resource type="Script" path="res://Scripts/keybind.gd" id="2_84tox"]
+[ext_resource type="Script" path="res://Scripts/fullscreen_checkbox.gd" id="3_6vjd3"]
+[ext_resource type="Script" path="res://Scripts/v_sync_checkbox.gd" id="3_bmk84"]
+[ext_resource type="Script" path="res://Scripts/refresh_rate_dropdown.gd" id="4_od0mu"]
+
+[sub_resource type="Theme" id="Theme_1l3qo"]
+default_font_size = 65
+
+[sub_resource type="Theme" id="Theme_ccgtq"]
+default_font_size = 25
+
+[sub_resource type="Theme" id="Theme_4w8qf"]
+
+[sub_resource type="Theme" id="Theme_xoyei"]
+
+[sub_resource type="Theme" id="Theme_lfbqq"]
+Label/font_sizes/font_size = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k53ov"]
+bg_color = Color(0.129412, 0.129412, 0.129412, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gkrwi"]
+bg_color = Color(0.129412, 0.129412, 0.129412, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qi2ij"]
+bg_color = Color(0.129412, 0.129412, 0.129412, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ogdvb"]
+bg_color = Color(0.129412, 0.129412, 0.129412, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_21nko"]
+bg_color = Color(0.129412, 0.129412, 0.129412, 1)
+
+[node name="settings_menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_dtto3")
+
+[node name="canvas" type="CanvasLayer" parent="."]
+
+[node name="settings" type="Label" parent="canvas"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -126.0
+offset_top = 58.0
+offset_right = 126.0
+offset_bottom = 148.0
+grow_horizontal = 2
+theme = SubResource("Theme_1l3qo")
+text = "Settings"
+
+[node name="back_button" type="Button" parent="canvas"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -99.5
+offset_top = -74.0
+offset_right = 99.5
+offset_bottom = -31.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = SubResource("Theme_ccgtq")
+text = "Return to Menu"
+
+[node name="TabContainer" type="TabContainer" parent="canvas"]
+offset_left = 310.0
+offset_top = 191.0
+offset_right = 899.0
+offset_bottom = 539.0
+theme = SubResource("Theme_4w8qf")
+theme_override_constants/side_margin = 5
+current_tab = 1
+
+[node name="Audio" type="TabBar" parent="canvas/TabContainer"]
+visible = false
+layout_mode = 2
+
+[node name="Display" type="TabBar" parent="canvas/TabContainer"]
+layout_mode = 2
+theme = SubResource("Theme_xoyei")
+
+[node name="display_settings" type="VBoxContainer" parent="canvas/TabContainer/Display"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="fullscreen" type="Label" parent="canvas/TabContainer/Display/display_settings"]
+layout_mode = 2
+text = "Fullscreen"
+
+[node name="fullscreen_checkbox" type="CheckBox" parent="canvas/TabContainer/Display/display_settings/fullscreen"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -1.0
+offset_top = -12.0
+offset_right = 23.0
+offset_bottom = 12.0
+grow_horizontal = 0
+grow_vertical = 2
+script = ExtResource("3_6vjd3")
+
+[node name="v_sync" type="Label" parent="canvas/TabContainer/Display/display_settings"]
+layout_mode = 2
+text = "V-Sync"
+
+[node name="v_sync_checkbox" type="CheckBox" parent="canvas/TabContainer/Display/display_settings/v_sync"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -1.0
+offset_top = -12.0
+offset_right = 23.0
+offset_bottom = 12.0
+grow_horizontal = 0
+grow_vertical = 2
+script = ExtResource("3_bmk84")
+
+[node name="refresh_rate" type="Label" parent="canvas/TabContainer/Display/display_settings"]
+layout_mode = 2
+text = "Refresh Rate"
+
+[node name="refresh_rate_dropdown" type="OptionButton" parent="canvas/TabContainer/Display/display_settings/refresh_rate"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 6.0
+offset_top = -15.0
+offset_right = 79.0
+offset_bottom = 16.0
+grow_horizontal = 0
+grow_vertical = 2
+script = ExtResource("4_od0mu")
+
+[node name="Keybinds" type="TabBar" parent="canvas/TabContainer"]
+visible = false
+layout_mode = 2
+
+[node name="keybinds_list" type="VBoxContainer" parent="canvas/TabContainer/Keybinds"]
+layout_mode = 2
+offset_left = 44.0
+offset_top = 4.0
+offset_right = 159.0
+offset_bottom = 146.0
+size_flags_vertical = 0
+theme = SubResource("Theme_lfbqq")
+theme_override_constants/separation = 10
+
+[node name="Move_Up" type="Label" parent="canvas/TabContainer/Keybinds/keybinds_list"]
+layout_mode = 2
+text = "Move Up"
+
+[node name="keybind" type="Button" parent="canvas/TabContainer/Keybinds/keybinds_list/Move_Up"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 308.0
+offset_top = -14.5
+offset_right = 338.0
+offset_bottom = 16.5
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_k53ov")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gkrwi")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_qi2ij")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_ogdvb")
+theme_override_styles/focus = SubResource("StyleBoxFlat_21nko")
+action_mode = 0
+text = "W"
+script = ExtResource("2_84tox")
+
+[node name="Move_Left" type="Label" parent="canvas/TabContainer/Keybinds/keybinds_list"]
+layout_mode = 2
+text = "Move Left"
+
+[node name="keybind" type="Button" parent="canvas/TabContainer/Keybinds/keybinds_list/Move_Left"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 308.0
+offset_top = -14.5
+offset_right = 338.0
+offset_bottom = 16.5
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_k53ov")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gkrwi")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_qi2ij")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_ogdvb")
+theme_override_styles/focus = SubResource("StyleBoxFlat_21nko")
+action_mode = 0
+text = "W"
+script = ExtResource("2_84tox")
+
+[node name="Move_Down" type="Label" parent="canvas/TabContainer/Keybinds/keybinds_list"]
+layout_mode = 2
+text = "Move Down"
+
+[node name="keybind" type="Button" parent="canvas/TabContainer/Keybinds/keybinds_list/Move_Down"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 308.0
+offset_top = -14.5
+offset_right = 338.0
+offset_bottom = 16.5
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_k53ov")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gkrwi")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_qi2ij")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_ogdvb")
+theme_override_styles/focus = SubResource("StyleBoxFlat_21nko")
+action_mode = 0
+text = "W"
+script = ExtResource("2_84tox")
+
+[node name="Move_Right" type="Label" parent="canvas/TabContainer/Keybinds/keybinds_list"]
+layout_mode = 2
+text = "Move Right"
+
+[node name="keybind" type="Button" parent="canvas/TabContainer/Keybinds/keybinds_list/Move_Right"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 308.0
+offset_top = -14.5
+offset_right = 338.0
+offset_bottom = 16.5
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_k53ov")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gkrwi")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_qi2ij")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_ogdvb")
+theme_override_styles/focus = SubResource("StyleBoxFlat_21nko")
+action_mode = 0
+text = "W"
+script = ExtResource("2_84tox")
+
+[connection signal="pressed" from="canvas/back_button" to="." method="_on_back_button_pressed"]
+[connection signal="toggled" from="canvas/TabContainer/Display/display_settings/fullscreen/fullscreen_checkbox" to="canvas/TabContainer/Display/display_settings/fullscreen/fullscreen_checkbox" method="_on_toggled"]
+[connection signal="toggled" from="canvas/TabContainer/Display/display_settings/v_sync/v_sync_checkbox" to="canvas/TabContainer/Display/display_settings/v_sync/v_sync_checkbox" method="_on_toggled"]
+[connection signal="item_selected" from="canvas/TabContainer/Display/display_settings/refresh_rate/refresh_rate_dropdown" to="canvas/TabContainer/Display/display_settings/refresh_rate/refresh_rate_dropdown" method="_on_item_selected"]
+[connection signal="pressed" from="canvas/TabContainer/Keybinds/keybinds_list/Move_Up/keybind" to="canvas/TabContainer/Keybinds/keybinds_list/Move_Up/keybind" method="_on_pressed"]
+[connection signal="pressed" from="canvas/TabContainer/Keybinds/keybinds_list/Move_Left/keybind" to="canvas/TabContainer/Keybinds/keybinds_list/Move_Left/keybind" method="_on_pressed"]
+[connection signal="pressed" from="canvas/TabContainer/Keybinds/keybinds_list/Move_Down/keybind" to="canvas/TabContainer/Keybinds/keybinds_list/Move_Down/keybind" method="_on_pressed"]
+[connection signal="pressed" from="canvas/TabContainer/Keybinds/keybinds_list/Move_Right/keybind" to="canvas/TabContainer/Keybinds/keybinds_list/Move_Right/keybind" method="_on_pressed"]

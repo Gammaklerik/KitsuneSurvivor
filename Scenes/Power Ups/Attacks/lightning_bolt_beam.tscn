@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://cwa3oodleeo60"]
+
+[ext_resource type="Script" path="res://Scripts/Power Ups/Attacks/lightning_bolt_beam.gd" id="1_au4fq"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1lsba"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_xxbov"]
+
+[node name="lightning_bolt_beam" type="ShapeCast2D"]
+shape = SubResource("CircleShape2D_1lsba")
+collision_mask = 4
+script = ExtResource("1_au4fq")
+
+[node name="sprite" type="Sprite2D" parent="."]
+position = Vector2(0, 24.75)
+scale = Vector2(15, 66.5)
+texture = SubResource("PlaceholderTexture2D_xxbov")

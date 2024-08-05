@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://di687tvmfy2p4"]
+
+[ext_resource type="Script" path="res://Scripts/power_up_control.gd" id="1_ks2e2"]
+[ext_resource type="Texture2D" uid="uid://bw5iluytu3vxi" path="res://Assets/Sprites/placeholder_proj_enemy.png" id="2_u5a64"]
+[ext_resource type="Texture2D" uid="uid://dtr6cjmbylwrb" path="res://Assets/Sprites/speed_boost_icon.png" id="3_t7hd7"]
+[ext_resource type="Texture2D" uid="uid://dhaseyj88w6l3" path="res://Assets/Sprites/placeholder_enemy.png" id="4_q7ki8"]
+
+[node name="power_up_control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_ks2e2")
+
+[node name="icon_button" type="TextureButton" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+button_mask = 0
+texture_normal = ExtResource("2_u5a64")
+texture_pressed = ExtResource("3_t7hd7")
+texture_hover = ExtResource("4_q7ki8")
+texture_disabled = ExtResource("3_t7hd7")
+stretch_mode = 0

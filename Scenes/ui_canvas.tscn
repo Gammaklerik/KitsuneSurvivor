@@ -1,0 +1,131 @@
+[gd_scene load_steps=10 format=3 uid="uid://cv0fia6et6671"]
+
+[ext_resource type="Script" path="res://Scripts/ui_control.gd" id="1_6cq37"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yrpnj"]
+bg_color = Color(1, 0, 0, 1)
+
+[sub_resource type="Theme" id="Theme_jd573"]
+HSlider/styles/grabber_area = SubResource("StyleBoxFlat_yrpnj")
+
+[sub_resource type="ImageTexture" id="ImageTexture_5l0rf"]
+
+[sub_resource type="Theme" id="Theme_dgk1r"]
+default_font_size = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fsmap"]
+bg_color = Color(0.384314, 0.690196, 1, 1)
+
+[sub_resource type="Theme" id="Theme_gqd8t"]
+HSlider/styles/grabber_area = SubResource("StyleBoxFlat_fsmap")
+
+[sub_resource type="ImageTexture" id="ImageTexture_3mgc4"]
+
+[sub_resource type="Theme" id="Theme_1sqpj"]
+default_font_size = 10
+
+[node name="ui_canvas" type="CanvasLayer"]
+
+[node name="ui_control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6cq37")
+
+[node name="health_bar" type="HSlider" parent="ui_control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.352
+anchor_top = 0.944
+anchor_right = 0.646
+anchor_bottom = 1.0
+offset_left = 0.495941
+offset_top = -8.71204
+offset_right = -169.192
+offset_bottom = -28.0
+scale = Vector2(2, 2)
+theme = SubResource("Theme_jd573")
+theme_override_icons/grabber_disabled = SubResource("ImageTexture_5l0rf")
+value = 95.0
+editable = false
+scrollable = false
+
+[node name="hp_label" type="Label" parent="ui_control/health_bar"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.214
+anchor_right = 1.0
+anchor_bottom = 0.695
+offset_left = 65.0
+offset_top = -3.138
+offset_right = -65.0
+offset_bottom = 2.685
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_dgk1r")
+text = "213/678"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="exp_bar" type="HSlider" parent="ui_control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.299
+anchor_top = 0.979
+anchor_right = 0.701
+anchor_bottom = 1.0
+offset_left = 0.551941
+offset_top = -7.39209
+offset_right = -0.552063
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = SubResource("Theme_gqd8t")
+theme_override_icons/grabber_disabled = SubResource("ImageTexture_3mgc4")
+min_value = 1.0
+value = 20.0
+editable = false
+scrollable = false
+
+[node name="exp_label" type="Label" parent="ui_control/exp_bar"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.26
+anchor_right = 1.0
+anchor_bottom = 0.832
+offset_left = 200.0
+offset_top = -5.5
+offset_right = -200.0
+offset_bottom = 3.2
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_1sqpj")
+text = "200/105"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="power_ups_panel" type="PanelContainer" parent="ui_control"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.267
+anchor_right = 0.051
+anchor_bottom = 0.735
+offset_top = -0.0160065
+offset_right = 0.247997
+offset_bottom = -0.279999
+grow_vertical = 2
+
+[node name="margin" type="MarginContainer" parent="ui_control/power_ups_panel"]
+layout_mode = 2
+theme_override_constants/margin_top = 40
+
+[node name="power_ups_container" type="VBoxContainer" parent="ui_control/power_ups_panel/margin"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_constants/separation = 55
+alignment = 1

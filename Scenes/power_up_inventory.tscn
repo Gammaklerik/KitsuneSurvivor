@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://ci6vaoj8gxfki"]
+
+[node name="power_up_inventory" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="canvas" type="CanvasLayer" parent="."]
+
+[node name="panel" type="Panel" parent="canvas"]
+anchors_preset = -1
+anchor_left = 0.15
+anchor_top = 0.156
+anchor_right = 0.85
+anchor_bottom = 0.844
+offset_left = 0.199997
+offset_top = -0.0880051
+offset_right = -0.200012
+offset_bottom = 0.0879517
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="inventory_grid" type="GridContainer" parent="canvas/panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 53.0
+offset_top = 10.0
+offset_right = -53.0
+offset_bottom = -22.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 60
+theme_override_constants/v_separation = 65
+columns = 12

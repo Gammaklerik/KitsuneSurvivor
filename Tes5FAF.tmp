@@ -5,46 +5,67 @@
 
 [node name="Node2D" type="Node2D"]
 
-[node name="Player_Body" parent="." instance=ExtResource("1_apeqk")]
+[node name="player_body" parent="." instance=ExtResource("1_apeqk")]
 
 [node name="enemy" parent="." instance=ExtResource("2_npoxy")]
-position = Vector2(228, 178)
+position = Vector2(316, -321)
 
 [node name="enemy2" parent="." instance=ExtResource("2_npoxy")]
-position = Vector2(118, 76)
+position = Vector2(59, -82)
 
 [node name="enemy3" parent="." instance=ExtResource("2_npoxy")]
-position = Vector2(61, 119)
+position = Vector2(492, -217)
 
 [node name="enemy4" parent="." instance=ExtResource("2_npoxy")]
-position = Vector2(184, 59)
+position = Vector2(990, -45)
 
 [node name="enemy5" parent="." instance=ExtResource("2_npoxy")]
-position = Vector2(330, 431)
+position = Vector2(141, 709)
 
 [node name="enemy6" parent="." instance=ExtResource("2_npoxy")]
 position = Vector2(165, -49)
 
 [node name="enemy7" parent="." instance=ExtResource("2_npoxy")]
-position = Vector2(57, 201)
+position = Vector2(-337, -45)
 
 [node name="enemy8" parent="." instance=ExtResource("2_npoxy")]
-position = Vector2(83, 33)
+position = Vector2(946, -182)
 
 [node name="enemy9" parent="." instance=ExtResource("2_npoxy")]
-position = Vector2(26, 68)
+position = Vector2(-135, -61)
 
 [node name="enemy10" parent="." instance=ExtResource("2_npoxy")]
-position = Vector2(128, 347)
+position = Vector2(6, 709)
 
 [node name="enemy11" parent="." instance=ExtResource("2_npoxy")]
-position = Vector2(98, 247)
+position = Vector2(311, 682)
 
 [node name="enemy12" parent="." instance=ExtResource("2_npoxy")]
-position = Vector2(413, 358)
+position = Vector2(415, 660)
 
 [node name="enemy13" parent="." instance=ExtResource("2_npoxy")]
-position = Vector2(269, 299)
+position = Vector2(742, 704)
 
 [node name="enemy14" parent="." instance=ExtResource("2_npoxy")]
-position = Vector2(157, 277)
+position = Vector2(-122, 622)
+
+[node name="enemy15" parent="." instance=ExtResource("2_npoxy")]
+position = Vector2(-158, 20)
+
+[node name="enemy16" parent="." instance=ExtResource("2_npoxy")]
+position = Vector2(-132, 292)
+
+[node name="enemy17" parent="." instance=ExtResource("2_npoxy")]
+position = Vector2(-213, 191)
+
+[node name="enemy18" parent="." instance=ExtResource("2_npoxy")]
+position = Vector2(-160, 492)
+
+[node name="enemy19" parent="." instance=ExtResource("2_npoxy")]
+position = Vector2(877, 628)
+
+[node name="enemy20" parent="." instance=ExtResource("2_npoxy")]
+position = Vector2(1034, 424)
+
+[node name="enemy21" parent="." instance=ExtResource("2_npoxy")]
+position = Vector2(1025, 224)

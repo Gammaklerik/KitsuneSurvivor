@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://dnj62khoevd2p"]
+
+[ext_resource type="Script" path="res://Scripts/Power Ups/Attacks/fireblast.gd" id="1_e73nq"]
+[ext_resource type="PackedScene" uid="uid://bd1hkso3e2r2u" path="res://Scenes/Power Ups/Attacks/fireblast_aoe.tscn" id="2_6xffb"]
+[ext_resource type="Texture2D" uid="uid://bu8o6cp7b4qar" path="res://Assets/Sprites/fireblast_icon.png" id="3_oaco2"]
+
+[node name="fireblast" type="Node2D" groups=["aoe", "attack", "fire"]]
+script = ExtResource("1_e73nq")
+attack = ExtResource("2_6xffb")
+
+[node name="icon" type="Sprite2D" parent="."]
+scale = Vector2(3.5, 3.5)
+texture = ExtResource("3_oaco2")

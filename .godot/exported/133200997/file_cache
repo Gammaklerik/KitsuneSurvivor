@@ -1,0 +1,15 @@
+res://Scenes/Power Ups/Attacks/aoe_initiator.tscn::a4b7736fb160888d310e4c8bad6d57db::1721668025::res://.godot/exported/133200997/export-cbee986c045d61d9a0d57a3a592767a9-aoe_initiator.scn
+res://Scenes/Power Ups/Attacks/area_of_effect.tscn::a2be88b4c9cf671d595ac71bd39d7273::1721668025::res://.godot/exported/133200997/export-88390eac74780b3d5cf2cb31f9143c69-area_of_effect.scn
+res://Scenes/Power Ups/Attacks/projectile.tscn::f196a1b821b29dd3b2c8d27b01eb0f54::1721668025::res://.godot/exported/133200997/export-54c999f4a69fd0890f5d84c126e92632-projectile.scn
+res://Scenes/Power Ups/Attacks/projectile_initiator.tscn::35a7bbe420114f4aeac9fc9430c9528c::1721668025::res://.godot/exported/133200997/export-89eb8e4cb71cd1bde830a55d062cef80-projectile_initiator.scn
+res://Scenes/Power Ups/Buffs/stat_buff.tscn::928de3216fb10e0b29242de1ebe85568::1721668025::res://.godot/exported/133200997/export-c1f2b923c9e01f0f9ba34774858ddcd4-stat_buff.scn
+res://Scenes/enemy_test.tscn::7ae37ea0b2a330a364798b6489f3b43e::1720026582::res://.godot/exported/133200997/export-d4a1cf146f5b3d1396c4992020dcf4cf-enemy_test.scn
+res://Scenes/level.tscn::9bd8a1eef2d7db6b5bd1816d09055970::1721668024::res://.godot/exported/133200997/export-509c53c765b75d897e8314a88ec6c376-level.scn
+res://Scenes/main_menu.tscn::a3a3ab6ee0d9c180ac57d8bf8decf1d2::1721668025::res://.godot/exported/133200997/export-502e6a9b269597544b234abf28958cd8-main_menu.scn
+res://Scenes/melee_enemy.tscn::7739082ccc12876f28412d1a239e0fe0::1721668025::res://.godot/exported/133200997/export-7dbf4ae76043d95804cc81b1467b046d-melee_enemy.scn
+res://Scenes/pause_menu.tscn::fc1e856d957c61661d34e0350239fdd6::1721668026::res://.godot/exported/133200997/export-e3d0420ddeb812b15edf3553f5556843-pause_menu.scn
+res://Scenes/player.tscn::a2ccdc82abce3bb5801d0a0632478560::1721668025::res://.godot/exported/133200997/export-1753c997600d68ab5d20ae99fddb15c6-player.scn
+res://Scenes/player_stats.tscn::6b855cd7510d3c5259db692cada19d8b::1721668026::res://.godot/exported/133200997/export-ddba44828324da8152fdee5901942440-player_stats.scn
+res://Scenes/power_up_canvas.tscn::a82a910eb2572c0765a62a229dc10e8b::1721668025::res://.godot/exported/133200997/export-4c1a655e16ca89f0ffba356f9138ed7d-power_up_canvas.scn
+res://Scenes/settings_menu.tscn::ea2003f6ede21dc3ee6316c44650e16e::1721668025::res://.godot/exported/133200997/export-720abb139b32760e6890550d60fd22c2-settings_menu.scn
+res://Scenes/ui_canvas.tscn::29999bf50e0514de0eebac46884b9a51::1721668025::res://.godot/exported/133200997/export-1d0d94bf218e6c75dcc4ba387c9b894d-ui_canvas.scn

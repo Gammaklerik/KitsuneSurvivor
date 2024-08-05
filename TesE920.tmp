@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://cgtcrlahj0mqr"]
+
+[ext_resource type="PackedScene" uid="uid://dhrc1dhlir8y3" path="res://Scenes/player.tscn" id="1_apeqk"]
+[ext_resource type="Script" path="res://Scripts/game_manager.gd" id="1_dakcy"]
+[ext_resource type="PackedScene" uid="uid://b83pu8dtjd7w3" path="res://Scenes/melee_enemy.tscn" id="2_ed4n1"]
+[ext_resource type="PackedScene" uid="uid://cv0fia6et6671" path="res://Scenes/ui_canvas.tscn" id="3_v02kb"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="ui_canvas" parent="." instance=ExtResource("3_v02kb")]
+
+[node name="player" parent="." node_paths=PackedStringArray("ui") instance=ExtResource("1_apeqk")]
+ui = NodePath("../ui_canvas")
+
+[node name="main_cam" type="Camera2D" parent="player"]
+position_smoothing_enabled = true
+
+[node name="game_manager" type="Node" parent="." node_paths=PackedStringArray("camera")]
+process_mode = 3
+script = ExtResource("1_dakcy")
+melee_01 = ExtResource("2_ed4n1")
+camera = NodePath("../player/main_cam")
+
+[connection signal="level_up" from="player" to="game_manager" method="_on_player_level_up"]

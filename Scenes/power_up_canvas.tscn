@@ -1,0 +1,298 @@
+[gd_scene load_steps=4 format=3 uid="uid://c1cwirelsu1f3"]
+
+[ext_resource type="Script" path="res://Scripts/power_up_button.gd" id="1_t7mm0"]
+[ext_resource type="Script" path="res://Scripts/power_ups.gd" id="2_q0yju"]
+[ext_resource type="Texture2D" uid="uid://bj4ll1b7kt0ja" path="res://Assets/Sprites/placeholder_projectile.png" id="2_vappb"]
+
+[node name="power_up_canvas" type="CanvasLayer"]
+process_mode = 3
+
+[node name="control_node" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="level_up_text" type="Label" parent="control_node"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -89.0
+offset_right = 89.0
+offset_bottom = 55.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 40
+text = "LEVEL UP"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="power_up_panel" type="Panel" parent="control_node"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 80.0
+offset_top = -213.0
+offset_right = 358.0
+offset_bottom = 211.0
+grow_vertical = 2
+
+[node name="power_up_button" type="Button" parent="control_node/power_up_panel" node_paths=PackedStringArray("power_ups_list")]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -87.5
+offset_top = -50.0
+offset_right = 87.5
+offset_bottom = -19.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Select"
+script = ExtResource("1_t7mm0")
+power_ups_list = NodePath("../../../power_ups")
+
+[node name="title" type="Label" parent="control_node/power_up_panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -59.5
+offset_top = 73.0
+offset_right = 59.5
+offset_bottom = 96.0
+grow_horizontal = 2
+text = "[power up title]"
+
+[node name="tags" type="Label" parent="control_node/power_up_panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -103.5
+offset_top = 101.0
+offset_right = 100.5
+offset_bottom = 149.0
+grow_horizontal = 2
+text = "tag - tag - tag"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="description" type="RichTextLabel" parent="control_node/power_up_panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -103.5
+offset_top = -44.5
+offset_right = 106.5
+offset_bottom = 160.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Soluta et quod voluptas id unde voluptate quia. Exercitationem voluptatem suscipit recusandae et deserunt fugit. Aut impedit quam qui."
+
+[node name="icon_control" type="Control" parent="control_node/power_up_panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 0.5
+offset_top = 44.0
+offset_right = 0.5
+offset_bottom = 44.0
+grow_horizontal = 2
+
+[node name="icon" type="Sprite2D" parent="control_node/power_up_panel/icon_control"]
+position = Vector2(0, -3)
+scale = Vector2(3.5, 3.5)
+texture = ExtResource("2_vappb")
+
+[node name="power_up_panel2" type="Panel" parent="control_node"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -139.0
+offset_top = -213.0
+offset_right = 139.0
+offset_bottom = 211.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="power_up_button" type="Button" parent="control_node/power_up_panel2" node_paths=PackedStringArray("power_ups_list")]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -87.5
+offset_top = -50.0
+offset_right = 87.5
+offset_bottom = -19.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Select"
+script = ExtResource("1_t7mm0")
+power_ups_list = NodePath("../../../power_ups")
+
+[node name="title" type="Label" parent="control_node/power_up_panel2"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -59.5
+offset_top = 73.0
+offset_right = 59.5
+offset_bottom = 96.0
+grow_horizontal = 2
+text = "[power up title]"
+
+[node name="tags" type="Label" parent="control_node/power_up_panel2"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -107.5
+offset_top = 101.0
+offset_right = 109.5
+offset_bottom = 147.0
+grow_horizontal = 2
+text = "tag - tag - tag"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="description" type="RichTextLabel" parent="control_node/power_up_panel2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -103.5
+offset_top = -44.5
+offset_right = 106.5
+offset_bottom = 160.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Soluta et quod voluptas id unde voluptate quia. Exercitationem voluptatem suscipit recusandae et deserunt fugit. Aut impedit quam qui."
+
+[node name="icon_control" type="Control" parent="control_node/power_up_panel2"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 0.5
+offset_top = 44.0
+offset_right = 0.5
+offset_bottom = 44.0
+grow_horizontal = 2
+
+[node name="icon" type="Sprite2D" parent="control_node/power_up_panel2/icon_control"]
+position = Vector2(0, -3)
+scale = Vector2(3.5, 3.5)
+texture = ExtResource("2_vappb")
+
+[node name="power_up_panel3" type="Panel" parent="control_node"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -356.0
+offset_top = -213.0
+offset_right = -78.0
+offset_bottom = 211.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="power_up_button" type="Button" parent="control_node/power_up_panel3" node_paths=PackedStringArray("power_ups_list")]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -87.5
+offset_top = -50.0
+offset_right = 87.5
+offset_bottom = -19.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Select"
+script = ExtResource("1_t7mm0")
+power_ups_list = NodePath("../../../power_ups")
+
+[node name="title" type="Label" parent="control_node/power_up_panel3"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -59.5
+offset_top = 73.0
+offset_right = 59.5
+offset_bottom = 96.0
+grow_horizontal = 2
+text = "[power up title]"
+
+[node name="tags" type="Label" parent="control_node/power_up_panel3"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -107.5
+offset_top = 101.0
+offset_right = 106.5
+offset_bottom = 149.0
+grow_horizontal = 2
+text = "tag - tag - tag"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="description" type="RichTextLabel" parent="control_node/power_up_panel3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -103.5
+offset_top = -44.5
+offset_right = 106.5
+offset_bottom = 160.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Soluta et quod voluptas id unde voluptate quia. Exercitationem voluptatem suscipit recusandae et deserunt fugit. Aut impedit quam qui."
+
+[node name="icon_control" type="Control" parent="control_node/power_up_panel3"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 0.5
+offset_top = 44.0
+offset_right = 0.5
+offset_bottom = 44.0
+grow_horizontal = 2
+
+[node name="icon" type="Sprite2D" parent="control_node/power_up_panel3/icon_control"]
+position = Vector2(0, -3)
+scale = Vector2(3.5, 3.5)
+texture = ExtResource("2_vappb")
+
+[node name="power_ups" type="Node" parent="."]
+script = ExtResource("2_q0yju")
+
+[connection signal="pressed" from="control_node/power_up_panel/power_up_button" to="control_node/power_up_panel/power_up_button" method="_on_pressed"]
+[connection signal="pressed" from="control_node/power_up_panel2/power_up_button" to="control_node/power_up_panel2/power_up_button" method="_on_pressed"]
+[connection signal="pressed" from="control_node/power_up_panel3/power_up_button" to="control_node/power_up_panel3/power_up_button" method="_on_pressed"]

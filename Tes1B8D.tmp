@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://cgtcrlahj0mqr"]
+
+[ext_resource type="PackedScene" uid="uid://dhrc1dhlir8y3" path="res://Scenes/player.tscn" id="1_apeqk"]
+[ext_resource type="PackedScene" uid="uid://blqv4wss2ee4f" path="res://Scenes/melee_enemy.tscn" id="1_j3lnw"]
+[ext_resource type="PackedScene" uid="uid://cv0fia6et6671" path="res://Scenes/ui_canvas.tscn" id="3_v02kb"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="ui_canvas" parent="." instance=ExtResource("3_v02kb")]
+
+[node name="player_body" parent="." node_paths=PackedStringArray("ui") instance=ExtResource("1_apeqk")]
+ui = NodePath("../ui_canvas")
+
+[node name="main_cam" type="Camera2D" parent="player_body"]
+position_smoothing_enabled = true
+
+[node name="enemy_sprite2" parent="." node_paths=PackedStringArray("health_bar") instance=ExtResource("1_j3lnw")]
+position = Vector2(103, -52)
+health_bar = NodePath("")

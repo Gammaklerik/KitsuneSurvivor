@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://02k7xcui85ns"]
+
+[ext_resource type="Texture2D" uid="uid://dnf5bl2k77is7" path="res://Assets/Sprites/firebolt_icon.png" id="1_3nr8v"]
+[ext_resource type="Script" path="res://Scripts/enemy_projectile.gd" id="1_bn40p"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ylah6"]
+radius = 9.05539
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xyinj"]
+radius = 9.0
+
+[node name="enemy_projectile" type="RigidBody2D"]
+gravity_scale = 0.0
+lock_rotation = true
+script = ExtResource("1_bn40p")
+
+[node name="sprite" type="Sprite2D" parent="."]
+position = Vector2(1.19209e-07, -1.19209e-07)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("1_3nr8v")
+
+[node name="col" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_ylah6")
+disabled = true
+
+[node name="hitbox" type="Area2D" parent="."]
+
+[node name="hitbox_col" type="CollisionShape2D" parent="hitbox"]
+shape = SubResource("CircleShape2D_xyinj")
+
+[node name="lifetime" type="Timer" parent="."]
+wait_time = 2.5
+one_shot = true
+autostart = true
+
+[connection signal="body_entered" from="hitbox" to="." method="_on_hitbox_body_entered"]
+[connection signal="timeout" from="lifetime" to="." method="_on_lifetime_timeout"]
