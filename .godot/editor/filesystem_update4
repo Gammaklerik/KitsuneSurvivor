@@ -1,3 +1,4 @@
+res://Scenes/ui_canvas.tscn
 res://Scenes/level.tscn
 res://Scenes/player.tscn
 res://Scenes/melee_enemy.tscn
@@ -7,7 +8,5 @@ res://Scenes/player_stats.tscn
 res://Scenes/power_up_canvas.tscn
 res://Scenes/Power Ups/Attacks/fireblast.tscn
 res://Scenes/power_up_inventory.tscn
-res://Scenes/ui_canvas.tscn
 res://Scenes/description_panel.tscn
 res://Scenes/inventory_control.tscn
-res://Scripts/game_manager.gd
