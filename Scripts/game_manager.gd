@@ -80,10 +80,11 @@ func _input(event):
 				elif !inventory_open && !get_tree().paused:
 					get_tree().paused = true
 					add_child(pause_menu.instantiate())
-				elif get_tree().paused:
-					if get_node("pause_menu") != null:
-						get_node("pause_menu").queue_free()
-						get_tree().paused = false
+				elif get_tree().paused && get_node("settings_menu") != null:
+					get_node("settings_menu").queue_free()
+				elif get_tree().paused && get_node("pause_menu") != null:
+					get_node("pause_menu").queue_free()
+					get_tree().paused = false
 			elif event.is_action_pressed("power_up_inventory") && inventory_open:
 				get_node("power_up_inventory").queue_free()
 				inventory_open = false

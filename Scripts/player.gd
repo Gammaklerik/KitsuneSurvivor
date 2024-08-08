@@ -9,6 +9,8 @@ var power_ups_ui : VBoxContainer
 signal new_power
 @export var game_manager : Node
 
+@onready var sprite_anim : AnimatedSprite2D = $player_sprite
+
 func _ready():
 	$stats.connect("health_modified", func(): ui.get_node("ui_control")._on_health_modified($stats.current_health, $stats.max_health))
 	$stats.max_health = 100
@@ -20,11 +22,17 @@ func _ready():
 	
 	connect("new_power", ui.get_node("ui_control")._on_new_power)
 	power_up(firebolt)
+	
+	sprite_anim.play("idle")
 
 func _physics_process(delta):
 	var direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
 	if direction:
 		velocity = direction * $stats.speed
+		if direction.x < 0:
+			sprite_anim.flip_h = true
+		elif direction.x > 0:
+			sprite_anim.flip_h = false
 	else:
 		velocity.x = move_toward(velocity.x, 0, $stats.speed)
 		velocity.y = move_toward(velocity.y, 0, $stats.speed)

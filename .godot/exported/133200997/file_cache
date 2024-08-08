@@ -1,15 +1,28 @@
-res://Scenes/Power Ups/Attacks/aoe_initiator.tscn::a4b7736fb160888d310e4c8bad6d57db::1721668025::res://.godot/exported/133200997/export-cbee986c045d61d9a0d57a3a592767a9-aoe_initiator.scn
-res://Scenes/Power Ups/Attacks/area_of_effect.tscn::a2be88b4c9cf671d595ac71bd39d7273::1721668025::res://.godot/exported/133200997/export-88390eac74780b3d5cf2cb31f9143c69-area_of_effect.scn
-res://Scenes/Power Ups/Attacks/projectile.tscn::f196a1b821b29dd3b2c8d27b01eb0f54::1721668025::res://.godot/exported/133200997/export-54c999f4a69fd0890f5d84c126e92632-projectile.scn
-res://Scenes/Power Ups/Attacks/projectile_initiator.tscn::35a7bbe420114f4aeac9fc9430c9528c::1721668025::res://.godot/exported/133200997/export-89eb8e4cb71cd1bde830a55d062cef80-projectile_initiator.scn
-res://Scenes/Power Ups/Buffs/stat_buff.tscn::928de3216fb10e0b29242de1ebe85568::1721668025::res://.godot/exported/133200997/export-c1f2b923c9e01f0f9ba34774858ddcd4-stat_buff.scn
 res://Scenes/enemy_test.tscn::7ae37ea0b2a330a364798b6489f3b43e::1720026582::res://.godot/exported/133200997/export-d4a1cf146f5b3d1396c4992020dcf4cf-enemy_test.scn
-res://Scenes/level.tscn::9bd8a1eef2d7db6b5bd1816d09055970::1721668024::res://.godot/exported/133200997/export-509c53c765b75d897e8314a88ec6c376-level.scn
-res://Scenes/main_menu.tscn::a3a3ab6ee0d9c180ac57d8bf8decf1d2::1721668025::res://.godot/exported/133200997/export-502e6a9b269597544b234abf28958cd8-main_menu.scn
-res://Scenes/melee_enemy.tscn::7739082ccc12876f28412d1a239e0fe0::1721668025::res://.godot/exported/133200997/export-7dbf4ae76043d95804cc81b1467b046d-melee_enemy.scn
-res://Scenes/pause_menu.tscn::fc1e856d957c61661d34e0350239fdd6::1721668026::res://.godot/exported/133200997/export-e3d0420ddeb812b15edf3553f5556843-pause_menu.scn
-res://Scenes/player.tscn::a2ccdc82abce3bb5801d0a0632478560::1721668025::res://.godot/exported/133200997/export-1753c997600d68ab5d20ae99fddb15c6-player.scn
-res://Scenes/player_stats.tscn::6b855cd7510d3c5259db692cada19d8b::1721668026::res://.godot/exported/133200997/export-ddba44828324da8152fdee5901942440-player_stats.scn
-res://Scenes/power_up_canvas.tscn::a82a910eb2572c0765a62a229dc10e8b::1721668025::res://.godot/exported/133200997/export-4c1a655e16ca89f0ffba356f9138ed7d-power_up_canvas.scn
-res://Scenes/settings_menu.tscn::ea2003f6ede21dc3ee6316c44650e16e::1721668025::res://.godot/exported/133200997/export-720abb139b32760e6890550d60fd22c2-settings_menu.scn
-res://Scenes/ui_canvas.tscn::29999bf50e0514de0eebac46884b9a51::1721668025::res://.godot/exported/133200997/export-1d0d94bf218e6c75dcc4ba387c9b894d-ui_canvas.scn
+res://Scenes/level.tscn::71b168cf3bd23a4c46dbe21e50510fb8::1723048220::res://.godot/exported/133200997/export-509c53c765b75d897e8314a88ec6c376-level.scn
+res://Scenes/main_menu.tscn::a3a3ab6ee0d9c180ac57d8bf8decf1d2::1722273351::res://.godot/exported/133200997/export-502e6a9b269597544b234abf28958cd8-main_menu.scn
+res://Scenes/melee_enemy.tscn::7d10d5645025c02dd92ea0bda5a7781d::1723048220::res://.godot/exported/133200997/export-7dbf4ae76043d95804cc81b1467b046d-melee_enemy.scn
+res://Scenes/pause_menu.tscn::fc1e856d957c61661d34e0350239fdd6::1723048220::res://.godot/exported/133200997/export-e3d0420ddeb812b15edf3553f5556843-pause_menu.scn
+res://Scenes/player.tscn::d3368eaf5090473ae9bdfff5f3600eed::1723048220::res://.godot/exported/133200997/export-1753c997600d68ab5d20ae99fddb15c6-player.scn
+res://Scenes/player_stats.tscn::6b855cd7510d3c5259db692cada19d8b::1723048220::res://.godot/exported/133200997/export-ddba44828324da8152fdee5901942440-player_stats.scn
+res://Scenes/power_up_canvas.tscn::af97e837a248d2f1f2f495692514f51a::1723048220::res://.godot/exported/133200997/export-4c1a655e16ca89f0ffba356f9138ed7d-power_up_canvas.scn
+res://Scenes/settings_menu.tscn::270a52d1b0eb40cd0fce925b99738b51::1723048220::res://.godot/exported/133200997/export-720abb139b32760e6890550d60fd22c2-settings_menu.scn
+res://Scenes/ui_canvas.tscn::cf3dceee37c5d3c715b3089dc16c4432::1723048220::res://.godot/exported/133200997/export-1d0d94bf218e6c75dcc4ba387c9b894d-ui_canvas.scn
+res://Scenes/Power Ups/Attacks/fireblast.tscn::6742891040845a1dd888002a254d451f::1723048220::res://.godot/exported/133200997/export-85ccd54c8799341d2c347619376a99c8-fireblast.scn
+res://Scenes/Power Ups/Attacks/fireblast_aoe.tscn::35ffdbf4733cae32517dc9e9704a75c4::1722530824::res://.godot/exported/133200997/export-1081f98ff72351f7b658d67522969d86-fireblast_aoe.scn
+res://Scenes/Power Ups/Attacks/firebolt.tscn::8672f04ea9a1c5570a01e558b6489d48::1722533559::res://.godot/exported/133200997/export-9f2a63aca0fcb47557bb27da0901e6ee-firebolt.scn
+res://Scenes/Power Ups/Attacks/firebolt_projectile.tscn::d474149d94ab69cd306d15f19f67eaee::1722533559::res://.godot/exported/133200997/export-2886783f403041b59fbd205f8f02cbbf-firebolt_projectile.scn
+res://Scenes/Power Ups/Attacks/kunai_projectile.tscn::5d92f730e68c3caa53aa955e96287ce2::1722446675::res://.godot/exported/133200997/export-d54e123a6697ca39599c8d274dad4c10-kunai_projectile.scn
+res://Scenes/Power Ups/Attacks/kunai_throw.tscn::89299e4575ca23962d46ffb627b06a33::1722455359::res://.godot/exported/133200997/export-96cd957a61d307d134334454e18e0826-kunai_throw.scn
+res://Scenes/Power Ups/Attacks/lightning_bolt.tscn::30492f31d24565825eb58e36de69da0e::1722533559::res://.godot/exported/133200997/export-c22fc993c3354a86c1b159b111ab1431-lightning_bolt.scn
+res://Scenes/Power Ups/Attacks/lightning_bolt_beam.tscn::f833307d9e1a161ac638dd1725e0f666::1722359958::res://.godot/exported/133200997/export-e2c83a9bcb4cbf8747db9973ddef0f84-lightning_bolt_beam.scn
+res://Scenes/Power Ups/Buffs/defence_boost.tscn::0f67c27173a12319f58fc914bce15e04::1722533559::res://.godot/exported/133200997/export-289915725e882ad50d3a2eccb41088e6-defence_boost.scn
+res://Scenes/Power Ups/Buffs/fire_damage_boost.tscn::4decc255e4b5fded23d46afe28a6e749::1722537517::res://.godot/exported/133200997/export-13028672c8f58b954681eb2c33593a1e-fire_damage_boost.scn
+res://Scenes/Power Ups/Buffs/hp_up.tscn::94e5269596d03e41d8db2eb7f11aa984::1722455359::res://.godot/exported/133200997/export-cdf9fd941c65dbeb15794f6a835c8552-hp_up.scn
+res://Scenes/Power Ups/Buffs/speed_boost.tscn::24b6d684c51713cd1182dc13e216c519::1722533559::res://.godot/exported/133200997/export-cdafd141328ccfafcc9904656509074f-speed_boost.scn
+res://Scenes/damage_popup.tscn::a9cd8032f4d23223ef0bde0bf82ad04d::1722446675::res://.godot/exported/133200997/export-654c711c01fbd810f9065b66a60184b9-damage_popup.scn
+res://Scenes/description_panel.tscn::21e10864a2f728a1c485ff589754f968::1723048220::res://.godot/exported/133200997/export-5033a402239cd6b021cdcb1e17a63afd-description_panel.scn
+res://Scenes/enemy_projectile.tscn::0e1f47857a7aa0a1936fb480d88d1469::1722533559::res://.godot/exported/133200997/export-710b0e98765948d309221ea4a8f2a3fd-enemy_projectile.scn
+res://Scenes/inventory_control.tscn::43c1452f3bfaead3b7a664f647f54264::1723048220::res://.godot/exported/133200997/export-8457e1f12e0aef5bd99bd555b42a1414-inventory_control.scn
+res://Scenes/power_up_inventory.tscn::8c062438058672cfe6f94152b10596f5::1723048220::res://.godot/exported/133200997/export-7333d2427768cf85eb15f2228c0404c0-power_up_inventory.scn
+res://Scenes/projectile_enemy.tscn::d8c7b70fbd43316a9e7ed77153ff6fae::1722533559::res://.godot/exported/133200997/export-83a614b013e3eb5a56aec8a18c6375df-projectile_enemy.scn

@@ -30,15 +30,19 @@ layer_0/tile_data = PackedInt32Array(0, 0, 0, 65536, 0, 0, 131072, 0, 0, 196608,
 [node name="ui_canvas" parent="." instance=ExtResource("1_bcw5f")]
 
 [node name="player" parent="." node_paths=PackedStringArray("ui", "game_manager") instance=ExtResource("2_7md2j")]
+position = Vector2(680, 379)
 ui = NodePath("../ui_canvas")
 game_manager = NodePath("../game_manager")
 
 [node name="main_cam" type="Camera2D" parent="player"]
+zoom = Vector2(1.5, 1.5)
 position_smoothing_enabled = true
+metadata/_edit_lock_ = true
 
 [node name="nav_region" type="NavigationRegion2D" parent="player"]
 position = Vector2(-456, -114)
 navigation_polygon = SubResource("NavigationPolygon_qwd4m")
+metadata/_edit_lock_ = true
 
 [node name="game_manager" type="Node" parent="." node_paths=PackedStringArray("camera", "player")]
 process_mode = 3

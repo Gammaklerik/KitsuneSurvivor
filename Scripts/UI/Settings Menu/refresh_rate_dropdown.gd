@@ -11,6 +11,7 @@ func _ready():
 			item_selected.emit()
 
 func _on_item_selected(index):
+	Engine.physics_ticks_per_second = int(get_item_text(index))
 	ProjectSettings.set_setting("physics/common/physics_ticks_per_second", int(get_item_text(index)))
-	ProjectSettings.save()
-	print(ProjectSettings.get_setting("physics/common/physics_ticks_per_second"))
+	ProjectSettings.save_custom("res://override.cfg")
+	

@@ -1,6 +1,8 @@
+OptionButton
+Label
+AnimatedSprite2D
 TileMap
 Control
-Label
 Sprite2D
 RichTextLabel
 Panel
@@ -10,6 +12,3 @@ CollisionShape2D
 Area2D
 RigidBody2D
 ShapeCast2D
-NavigationAgent2D
-CanvasLayer
-GridContainer

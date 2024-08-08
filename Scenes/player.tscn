@@ -1,22 +1,69 @@
-[gd_scene load_steps=5 format=3 uid="uid://dhrc1dhlir8y3"]
+[gd_scene load_steps=11 format=3 uid="uid://dhrc1dhlir8y3"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_gm0ku"]
-[ext_resource type="Texture2D" uid="uid://cqa0ricre6gyg" path="res://Assets/Sprites/placeholder_player.png" id="2_ou0ek"]
+[ext_resource type="Texture2D" uid="uid://bmdno4u713bjk" path="res://Assets/Sprites/player_idle.png" id="2_rmnmu"]
 [ext_resource type="PackedScene" uid="uid://b1td8p2wr4tmk" path="res://Scenes/player_stats.tscn" id="3_cn8pp"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_lxrr1"]
-radius = 24.3311
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_aguv1"]
+radius = 7.0
+height = 24.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nco53"]
+atlas = ExtResource("2_rmnmu")
+region = Rect2(0, 0, 30, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qioud"]
+atlas = ExtResource("2_rmnmu")
+region = Rect2(32, 0, 30, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3yv2f"]
+atlas = ExtResource("2_rmnmu")
+region = Rect2(64, 0, 30, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fqoie"]
+atlas = ExtResource("2_rmnmu")
+region = Rect2(96, 0, 30, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fp4t4"]
+atlas = ExtResource("2_rmnmu")
+region = Rect2(128, 0, 30, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kfls6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nco53")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qioud")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3yv2f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fqoie")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fp4t4")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
 
 [node name="player_body" type="CharacterBody2D" groups=["player"]]
-position = Vector2(456, 114)
 motion_mode = 1
 script = ExtResource("1_gm0ku")
 
 [node name="player_col_shape" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_lxrr1")
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_aguv1")
 
-[node name="player_sprite" type="Sprite2D" parent="."]
-texture = ExtResource("2_ou0ek")
-metadata/_edit_lock_ = true
+[node name="player_sprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(-2, -9)
+sprite_frames = SubResource("SpriteFrames_kfls6")
+animation = &"idle"
+frame = 1
+frame_progress = 0.24973
 
 [node name="stats" parent="." instance=ExtResource("3_cn8pp")]

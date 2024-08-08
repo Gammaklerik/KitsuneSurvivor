@@ -1,7 +1,7 @@
 extends Button
 
 var action_name : String
-var bind_key : InputEvent
+var bind_key : InputEventKey
 
 var listening : bool = false
 
@@ -12,10 +12,7 @@ func _ready():
 
 func change_text():
 	bind_key = InputMap.action_get_events(action_name)[0]
-	if bind_key.as_text().contains(" (Physical)"):
-		text = bind_key.as_text().substr(0, bind_key.as_text().length() - 11)
-	else:
-		text = bind_key.as_text()
+	text = str(OS.get_keycode_string(bind_key.physical_keycode))
 
 func _on_pressed():
 	listening = true
