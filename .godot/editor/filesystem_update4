@@ -1,5 +1,6 @@
-res://Scenes/player.tscn
+res://Scenes/main_menu.tscn
 res://Scenes/level.tscn
+res://Scenes/player.tscn
 res://Scenes/melee_enemy.tscn
 res://Scenes/settings_menu.tscn
 res://Scenes/pause_menu.tscn
@@ -10,28 +11,5 @@ res://Scenes/power_up_inventory.tscn
 res://Scenes/ui_canvas.tscn
 res://Scenes/description_panel.tscn
 res://Scenes/inventory_control.tscn
-res://Scripts/player.gd
-res://Scripts/v_sync_checkbox.gd
-res://Scripts/fullscreen_checkbox.gd
-res://Scripts/refresh_rate_dropdown.gd
-res://Scripts/Power Ups/Attacks/area_of_effect.gd
-res://Scripts/damage_popup.gd
-res://Scripts/Power Ups/Buffs/defence_boost.gd
-res://Scripts/enemy_projectile.gd
-res://Scripts/Power Ups/Attacks/fireblast.gd
-res://Scripts/Power Ups/Attacks/firebolt.gd
-res://Scripts/Power Ups/Buffs/fire_damage_boost.gd
-res://Scripts/game_manager.gd
-res://Scripts/Power Ups/Buffs/hp_up.gd
-res://Scripts/keybind.gd
-res://Scripts/Power Ups/Attacks/kunai_projectile.gd
-res://Scripts/Power Ups/Attacks/kunai_throw.gd
-res://Scripts/Power Ups/Attacks/lightning_bolt.gd
-res://Scripts/Power Ups/Attacks/lightning_bolt_beam.gd
-res://Scripts/main_menu.gd
-res://Scripts/melee_enemy_logic.gd
-res://override.cfg
-res://Scripts/pause_menu.gd
-res://Scripts/player_stats.gd
-res://Scripts/v_sync_options.gd
 res://Scripts/UI/Settings Menu/resolution_options.gd
+res://Scripts/power_up_control.gd

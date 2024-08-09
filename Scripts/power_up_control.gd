@@ -20,7 +20,7 @@ func _process(delta):
 	if button.is_hovered() && !showing_description:
 		show_description()
 		showing_description = true
-	else:
+	elif !button.is_hovered():
 		if panel != null && showing_description:
 			panel.queue_free()
 			showing_description = false

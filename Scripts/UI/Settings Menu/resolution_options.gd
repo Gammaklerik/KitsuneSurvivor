@@ -25,6 +25,8 @@ var resolutions : Array[Dictionary] = [
 func _ready():
 	for resolution in resolutions:
 		add_item(str(resolution.width) + " x " + str(resolution.height) + " (" + str(resolution.aspect_ratio) + ")", resolutions.find(resolution))
+		if resolution.width == ProjectSettings.get_setting("display/window/size/viewport_width") && resolution.height == ProjectSettings.get_setting("display/window/size/viewport_height"):
+			select(item_count - 1)
 
 func _on_item_selected(index):
 	get_window().content_scale_size = Vector2i(resolutions[get_item_id(index)].width, resolutions[get_item_id(index)].height)

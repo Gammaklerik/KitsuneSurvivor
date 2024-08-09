@@ -1,9 +1,12 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1723053858
+::res://::1723129638
 icon.svg::CompressedTexture2D::725105584831926668::1719500724::1719500737::1::::<><>::
-override.cfg::TextFile::-1::1723053891::0::1::::<><>::
+override.cfg::TextFile::-1::1723057517::0::1::::<><>::
 ::res://Assets/::1719598175
-::res://Assets/Sprites/::1723046975
+::res://Assets/Sprites/::1723129006
+button_hover.png::CompressedTexture2D::2528517668985455485::1723128976::1723129006::1::::<><>::
+button_normal.png::CompressedTexture2D::2261037857715654358::1723128976::1723129006::1::::<><>::
+button_pressed.png::CompressedTexture2D::8564216755682960266::1723128976::1723129006::1::::<><>::
 defense_boost_icon.png::CompressedTexture2D::6724176529100571783::1722361480::1722361483::1::::<><>::
 fireblast_icon.png::CompressedTexture2D::3859227549522698377::1721923238::1721923650::1::::<><>::
 firebolt_icon.png::CompressedTexture2D::8083862822685877284::1721923068::1721923650::1::::<><>::
@@ -17,26 +20,26 @@ placeholder_proj_enemy.png::CompressedTexture2D::3993013044460126570::1722273899
 placeholder_tile.png::CompressedTexture2D::2631225451180670421::1722870167::1722870169::1::::<><>::
 player_idle.png::CompressedTexture2D::3235695818195324352::1723045416::1723046975::1::::<><>::
 speed_boost_icon.png::CompressedTexture2D::8529830791710274963::1722361016::1722361483::1::::<><>::
-::res://Scenes/::1723053902
+::res://Scenes/::1723131583
 damage_popup.tscn::PackedScene::5490288351174440381::1722446675::0::1::::<><>::res://Scripts/damage_popup.gd
-description_panel.tscn::PackedScene::7555918573558040646::1723053893::0::1::::<><>::uid://dnf5bl2k77is7::::res://Assets/Sprites/firebolt_icon.png
+description_panel.tscn::PackedScene::7555918573558040646::1723131582::0::1::::<><>::uid://dnf5bl2k77is7::::res://Assets/Sprites/firebolt_icon.png
 enemy_projectile.tscn::PackedScene::1811124817690438348::1722533559::0::1::::<><>::uid://dnf5bl2k77is7::::res://Assets/Sprites/firebolt_icon.png<>res://Scripts/enemy_projectile.gd
 enemy_test.tscn::PackedScene::6495226019555950521::1720026582::0::1::::<><>::uid://dhaseyj88w6l3::::res://Assets/Sprites/placeholder_enemy.png
-inventory_control.tscn::PackedScene::7786830347663092567::1723053893::0::1::::<><>::res://Scripts/power_up_control.gd<>uid://bw5iluytu3vxi::::res://Assets/Sprites/placeholder_proj_enemy.png<>uid://dtr6cjmbylwrb::::res://Assets/Sprites/speed_boost_icon.png<>uid://dhaseyj88w6l3::::res://Assets/Sprites/placeholder_enemy.png
-level.tscn::PackedScene::5233349977111371929::1723053892::0::1::::<><>::uid://bdqt5s7vpot5n::::res://Assets/Sprites/placeholder_tile.png<>uid://cv0fia6et6671::::res://Scenes/ui_canvas.tscn<>uid://dhrc1dhlir8y3::::res://Scenes/player.tscn<>res://Scripts/game_manager.gd<>uid://b83pu8dtjd7w3::::res://Scenes/melee_enemy.tscn<>uid://j85wj1ydoba0::::res://Scenes/projectile_enemy.tscn
-main_menu.tscn::PackedScene::3293620298918857635::1722273351::0::1::::<><>::res://Scripts/main_menu.gd
-melee_enemy.tscn::PackedScene::4761403310411862096::1723053892::0::1::::<><>::res://Scripts/melee_enemy_logic.gd<>uid://dhaseyj88w6l3::::res://Assets/Sprites/placeholder_enemy.png<>uid://ckhsinsgtk3w8::::res://Scenes/damage_popup.tscn
-pause_menu.tscn::PackedScene::2439996336737003023::1723053892::0::1::::<><>::res://Scripts/pause_menu.gd
-player.tscn::PackedScene::7685846411886475128::1723053892::0::1::::<><>::res://Scripts/player.gd<>uid://bmdno4u713bjk::::res://Assets/Sprites/player_idle.png<>uid://b1td8p2wr4tmk::::res://Scenes/player_stats.tscn
-player_stats.tscn::PackedScene::4250795708369670374::1723053892::0::1::::<><>::res://Scripts/player_stats.gd
-power_up_canvas.tscn::PackedScene::6603231017276095182::1723053893::0::1::::<><>::res://Scripts/power_up_button.gd<>res://Scripts/power_ups.gd<>uid://bj4ll1b7kt0ja::::res://Assets/Sprites/placeholder_projectile.png
-power_up_inventory.tscn::PackedScene::5399623634452848872::1723053893::0::1::::<><>::
+inventory_control.tscn::PackedScene::7786830347663092567::1723131583::0::1::::<><>::res://Scripts/power_up_control.gd<>uid://bw5iluytu3vxi::::res://Assets/Sprites/placeholder_proj_enemy.png<>uid://dtr6cjmbylwrb::::res://Assets/Sprites/speed_boost_icon.png<>uid://dhaseyj88w6l3::::res://Assets/Sprites/placeholder_enemy.png
+level.tscn::PackedScene::5233349977111371929::1723131582::0::1::::<><>::uid://bdqt5s7vpot5n::::res://Assets/Sprites/placeholder_tile.png<>uid://cv0fia6et6671::::res://Scenes/ui_canvas.tscn<>uid://dhrc1dhlir8y3::::res://Scenes/player.tscn<>res://Scripts/game_manager.gd<>uid://b83pu8dtjd7w3::::res://Scenes/melee_enemy.tscn<>uid://j85wj1ydoba0::::res://Scenes/projectile_enemy.tscn
+main_menu.tscn::PackedScene::3293620298918857635::1723131583::0::1::::<><>::res://Scripts/main_menu.gd<>uid://7hi70ovf7k3g::::res://Assets/Sprites/button_normal.png<>uid://bca3k08e10j22::::res://Assets/Sprites/button_hover.png<>uid://duatns6hyih11::::res://Assets/Sprites/button_pressed.png
+melee_enemy.tscn::PackedScene::4761403310411862096::1723131582::0::1::::<><>::res://Scripts/melee_enemy_logic.gd<>uid://dhaseyj88w6l3::::res://Assets/Sprites/placeholder_enemy.png<>uid://ckhsinsgtk3w8::::res://Scenes/damage_popup.tscn
+pause_menu.tscn::PackedScene::2439996336737003023::1723131582::0::1::::<><>::res://Scripts/pause_menu.gd<>uid://7hi70ovf7k3g::::res://Assets/Sprites/button_normal.png<>uid://bca3k08e10j22::::res://Assets/Sprites/button_hover.png<>uid://duatns6hyih11::::res://Assets/Sprites/button_pressed.png
+player.tscn::PackedScene::7685846411886475128::1723131582::0::1::::<><>::res://Scripts/player.gd<>uid://bmdno4u713bjk::::res://Assets/Sprites/player_idle.png<>uid://b1td8p2wr4tmk::::res://Scenes/player_stats.tscn
+player_stats.tscn::PackedScene::4250795708369670374::1723131582::0::1::::<><>::res://Scripts/player_stats.gd
+power_up_canvas.tscn::PackedScene::6603231017276095182::1723131582::0::1::::<><>::res://Scripts/power_up_button.gd<>res://Scripts/power_ups.gd<>uid://bj4ll1b7kt0ja::::res://Assets/Sprites/placeholder_projectile.png
+power_up_inventory.tscn::PackedScene::5399623634452848872::1723131582::0::1::::<><>::
 projectile_enemy.tscn::PackedScene::701685369845242429::1722533559::0::1::::<><>::res://Scripts/projectile_enemy.gd<>uid://bw5iluytu3vxi::::res://Assets/Sprites/placeholder_proj_enemy.png<>uid://ckhsinsgtk3w8::::res://Scenes/damage_popup.tscn<>uid://02k7xcui85ns::::res://Scenes/enemy_projectile.tscn
-settings_menu.tscn::PackedScene::7976283013279573344::1723054710::0::1::::<><>::res://Scripts/settings_menu.gd<>res://Scripts/keybind.gd<>res://Scripts/fullscreen_checkbox.gd<>res://Scripts/v_sync_options.gd<>res://Scripts/refresh_rate_dropdown.gd<>res://Scripts/resolution_options.gd
-ui_canvas.tscn::PackedScene::6298734447048772414::1723053893::0::1::::<><>::res://Scripts/ui_control.gd
+settings_menu.tscn::PackedScene::7976283013279573344::1723131636::0::1::::<><>::res://Scripts/UI/Settings Menu/settings_menu.gd<>res://Scripts/UI/Settings Menu/fullscreen_checkbox.gd<>res://Scripts/UI/Settings Menu/refresh_rate_dropdown.gd<>res://Scripts/v_sync_options.gd<>res://Scripts/UI/Settings Menu/resolution_options.gd<>res://Scripts/UI/Settings Menu/keybind.gd
+ui_canvas.tscn::PackedScene::6298734447048772414::1723131582::0::1::::<><>::res://Scripts/ui_control.gd
 ::res://Scenes/Power Ups/::1720801471
-::res://Scenes/Power Ups/Attacks/::1723053893
-fireblast.tscn::PackedScene::8092227398060858137::1723053893::0::1::::<><>::res://Scripts/Power Ups/Attacks/fireblast.gd<>uid://bd1hkso3e2r2u::::res://Scenes/Power Ups/Attacks/fireblast_aoe.tscn<>uid://bu8o6cp7b4qar::::res://Assets/Sprites/fireblast_icon.png
+::res://Scenes/Power Ups/Attacks/::1723131582
+fireblast.tscn::PackedScene::8092227398060858137::1723131582::0::1::::<><>::res://Scripts/Power Ups/Attacks/fireblast.gd<>uid://bd1hkso3e2r2u::::res://Scenes/Power Ups/Attacks/fireblast_aoe.tscn<>uid://bu8o6cp7b4qar::::res://Assets/Sprites/fireblast_icon.png
 fireblast_aoe.tscn::PackedScene::2651104881427350022::1722530824::0::1::::<><>::res://Scripts/Power Ups/Attacks/area_of_effect.gd<>uid://bj4ll1b7kt0ja::::res://Assets/Sprites/placeholder_projectile.png
 firebolt.tscn::PackedScene::7082001645749784172::1722533559::0::1::::<><>::res://Scripts/Power Ups/Attacks/firebolt.gd<>uid://cc0i2pkgiaw1s::::res://Scenes/Power Ups/Attacks/firebolt_projectile.tscn<>uid://dnf5bl2k77is7::::res://Assets/Sprites/firebolt_icon.png
 firebolt_projectile.tscn::PackedScene::4965363254472951070::1722533559::0::1::::<><>::res://Scripts/Power Ups/Attacks/projectile.gd<>uid://dnf5bl2k77is7::::res://Assets/Sprites/firebolt_icon.png
@@ -49,12 +52,10 @@ defence_boost.tscn::PackedScene::6814977033090902573::1722533559::0::1::::<><>::
 fire_damage_boost.tscn::PackedScene::4689136924729176512::1722537517::0::1::::<><>::res://Scripts/Power Ups/Buffs/fire_damage_boost.gd<>uid://c5gufuvrjhqsj::::res://Assets/Sprites/fire_boost_icon.png
 hp_up.tscn::PackedScene::8445926217799155139::1722455359::0::1::::<><>::res://Scripts/Power Ups/Buffs/hp_up.gd<>uid://dnq4dyy3bqf0v::::res://Assets/Sprites/hp_up_icon.png
 speed_boost.tscn::PackedScene::392360037482202867::1722533559::0::1::::<><>::res://Scripts/Power Ups/Buffs/speed_boost.gd<>uid://dtr6cjmbylwrb::::res://Assets/Sprites/speed_boost_icon.png
-::res://Scripts/::1723054684
+::res://Scripts/::1723054710
 damage_popup.gd::GDScript::-1::1723050374::0::1::::<>Node2D<>::
 enemy_projectile.gd::GDScript::-1::1723050374::0::1::::<>RigidBody2D<>::
-fullscreen_checkbox.gd::GDScript::-1::1723052709::0::1::::<>CheckBox<>::
 game_manager.gd::GDScript::-1::1723050374::0::1::::<>Node<>::
-keybind.gd::GDScript::-1::1723051316::0::1::::<>Button<>::
 main_menu.gd::GDScript::-1::1723050375::0::1::::<>Control<>::
 melee_enemy_logic.gd::GDScript::-1::1723050375::0::1::::<>RigidBody2D<>::
 pause_menu.gd::GDScript::-1::1723050089::0::1::::<>Control<>::
@@ -64,9 +65,6 @@ power_ups.gd::GDScript::-1::1722362420::0::1::::<>Node<>::
 power_up_button.gd::GDScript::-1::1722614618::0::1::::<>Button<>::
 power_up_control.gd::GDScript::-1::1722536950::0::1::::<>Control<>::
 projectile_enemy.gd::GDScript::-1::1722452558::0::1::::<>RigidBody2D<>::
-refresh_rate_dropdown.gd::GDScript::-1::1723052914::0::1::::<>OptionButton<>::
-resolution_options.gd::GDScript::-1::1723054668::0::1::::<>OptionButton<>::
-settings_menu.gd::GDScript::-1::1721057774::0::1::::<>Control<>::
 ui_control.gd::GDScript::-1::1721924840::0::1::::<>Control<>::
 v_sync_options.gd::GDScript::-1::1723053902::0::1::::<>OptionButton<>::
 ::res://Scripts/Power Ups/::1720801550
@@ -85,4 +83,9 @@ fire_damage_boost.gd::GDScript::-1::1723050374::0::1::::<>Node2D<>::
 hp_up.gd::GDScript::-1::1723050374::0::1::::<>Node2D<>::
 speed_boost.gd::GDScript::-1::1722531683::0::1::::<>Node2D<>::
 ::res://Scripts/UI/::1723054692
-::res://Scripts/UI/Settings Menu/::1723054692
+::res://Scripts/UI/Settings Menu/::1723130213
+fullscreen_checkbox.gd::GDScript::-1::1723052709::0::1::::<>CheckBox<>::
+keybind.gd::GDScript::-1::1723051316::0::1::::<>Button<>::
+refresh_rate_dropdown.gd::GDScript::-1::1723052914::0::1::::<>OptionButton<>::
+resolution_options.gd::GDScript::-1::1723130213::0::1::::<>OptionButton<>::
+settings_menu.gd::GDScript::-1::1721057774::0::1::::<>Control<>::

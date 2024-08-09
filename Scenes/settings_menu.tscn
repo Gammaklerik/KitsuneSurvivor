@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" path="res://Scripts/UI/Settings Menu/settings_menu.gd" id="1_v3ms7"]
 [ext_resource type="Script" path="res://Scripts/UI/Settings Menu/fullscreen_checkbox.gd" id="2_mg57a"]
+[ext_resource type="Script" path="res://Scripts/UI/Settings Menu/v_sync_options.gd" id="3_eh67v"]
 [ext_resource type="Script" path="res://Scripts/UI/Settings Menu/refresh_rate_dropdown.gd" id="4_2i4pa"]
-[ext_resource type="Script" path="res://Scripts/v_sync_options.gd" id="4_o37ie"]
 [ext_resource type="Script" path="res://Scripts/UI/Settings Menu/resolution_options.gd" id="5_kyrgt"]
 [ext_resource type="Script" path="res://Scripts/UI/Settings Menu/keybind.gd" id="6_naflw"]
 
@@ -47,37 +47,46 @@ script = ExtResource("1_v3ms7")
 [node name="canvas" type="CanvasLayer" parent="."]
 
 [node name="settings" type="Label" parent="canvas"]
-anchors_preset = 5
+anchors_preset = -1
 anchor_left = 0.5
+anchor_top = 0.151
 anchor_right = 0.5
+anchor_bottom = 0.151
 offset_left = -126.0
-offset_top = 58.0
+offset_top = -45.08
 offset_right = 126.0
-offset_bottom = 148.0
+offset_bottom = 44.92
 grow_horizontal = 2
 theme = SubResource("Theme_1l3qo")
 text = "Settings"
 
 [node name="back_button" type="Button" parent="canvas"]
-anchors_preset = 7
+anchors_preset = 8
 anchor_left = 0.5
-anchor_top = 1.0
+anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 1.0
+anchor_bottom = 0.5
 offset_left = -99.5
-offset_top = -74.0
+offset_top = 299.0
 offset_right = 99.5
-offset_bottom = -31.0
+offset_bottom = 342.0
 grow_horizontal = 2
 grow_vertical = 0
 theme = SubResource("Theme_ccgtq")
 text = "Return to Menu"
 
 [node name="TabContainer" type="TabContainer" parent="canvas"]
-offset_left = 310.0
-offset_top = 191.0
-offset_right = 899.0
-offset_bottom = 539.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -436.5
+offset_top = -258.0
+offset_right = 436.5
+offset_bottom = 258.0
+grow_horizontal = 2
+grow_vertical = 2
 theme = SubResource("Theme_4w8qf")
 theme_override_constants/side_margin = 5
 current_tab = 1
@@ -140,7 +149,7 @@ popup/item_1/text = "Adaptive"
 popup/item_1/id = 2
 popup/item_2/text = "Enabled"
 popup/item_2/id = 1
-script = ExtResource("4_o37ie")
+script = ExtResource("3_eh67v")
 
 [node name="refresh_rate" type="Label" parent="canvas/TabContainer/Display/display_settings"]
 layout_mode = 2
