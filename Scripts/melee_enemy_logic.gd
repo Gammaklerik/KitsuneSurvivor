@@ -15,6 +15,8 @@ var exp_points : float = 20
 @export var health_bar : HSlider
 @export var damage_number_popup : PackedScene
 @onready var nav_agent : NavigationAgent2D = $nav_agent
+@onready var sprite : AnimatedSprite2D = $sprite
+@onready var vfx_anim : AnimatedSprite2D = $vfx
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -28,6 +30,10 @@ func _ready():
 func _physics_process(delta):
 	nav_agent.target_position = player.global_position
 	linear_velocity = global_position.direction_to(nav_agent.get_next_path_position()) * speed
+	if linear_velocity.x < 0:
+		sprite.flip_h = true
+	elif linear_velocity.x > 0:
+		sprite.flip_h = false
 
 func _on_attack_area_body_entered(body):
 	if body.name == "player":
@@ -45,3 +51,16 @@ func take_damage(dmg):
 
 func _on_enemy_killed():
 	queue_free()
+
+func _on_vfx_frame_changed():
+	if vfx_anim.frame == 2:
+		$attack_area/attack_col.disabled = false
+
+func _on_attack_range_body_entered(body):
+	vfx_anim.visible = true
+	vfx_anim.play("attack")
+
+func _on_vfx_animation_finished():
+	vfx_anim.visible = false
+	vfx_anim.stop()
+	$attack_area/attack_col.disabled = true

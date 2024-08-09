@@ -1,6 +1,6 @@
-res://Scenes/main_menu.tscn
-res://Scenes/level.tscn
 res://Scenes/player.tscn
+res://Scripts/player.gd
+res://Scenes/level.tscn
 res://Scenes/melee_enemy.tscn
 res://Scenes/settings_menu.tscn
 res://Scenes/pause_menu.tscn
@@ -11,5 +11,11 @@ res://Scenes/power_up_inventory.tscn
 res://Scenes/ui_canvas.tscn
 res://Scenes/description_panel.tscn
 res://Scenes/inventory_control.tscn
-res://Scripts/UI/Settings Menu/resolution_options.gd
-res://Scripts/power_up_control.gd
+res://Scenes/main_menu.tscn
+res://Scripts/player_stats.gd
+res://Scripts/melee_enemy_logic.gd
+res://Scripts/game_manager.gd
+res://Scenes/waves_cleared.gd
+res://Scripts/UI/death_screen.gd
+res://Scenes/death_screen.tscn
+res://Scripts/UI/back_to_menu.gd

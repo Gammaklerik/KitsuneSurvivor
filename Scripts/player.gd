@@ -9,9 +9,13 @@ var power_ups_ui : VBoxContainer
 signal new_power
 @export var game_manager : Node
 
+signal dead
+
 @onready var sprite_anim : AnimatedSprite2D = $player_sprite
 
 func _ready():
+	dead.connect(get_tree().current_scene.get_node("game_manager")._on_player_death)
+	
 	$stats.connect("health_modified", func(): ui.get_node("ui_control")._on_health_modified($stats.current_health, $stats.max_health))
 	$stats.max_health = 100
 	$stats.current_health = $stats.max_health
@@ -36,6 +40,11 @@ func _physics_process(delta):
 	else:
 		velocity.x = move_toward(velocity.x, 0, $stats.speed)
 		velocity.y = move_toward(velocity.y, 0, $stats.speed)
+	
+	if velocity != Vector2.ZERO:
+		sprite_anim.play("run", 1.0 * $stats.speed_multiplier)
+	else:
+		sprite_anim.play("idle")
 	
 	move_and_slide()
 
@@ -71,6 +80,8 @@ func _on_attack_cooldown(attack: Node2D):
 
 func take_damage(dmg: float):
 	$stats.current_health -= (dmg * $stats.damage_reduction)
+	if $stats.current_health == 0:
+		dead.emit()
 
 func _on_enemy_killed(exp: float):
 	gain_exp(exp)

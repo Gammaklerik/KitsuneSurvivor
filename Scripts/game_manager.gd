@@ -4,20 +4,30 @@ extends Node
 @export var projectile_01 : PackedScene
 var enemies : Array[PackedScene]
 
+signal wave_cleared
+var waves_cleared : int = 0
+var enemies_killed : int = 0
+@onready var session_timer : Timer = $session_timer
+var seconds_alive : int = 0
+
 var wave_list : Array[RigidBody2D]
 
 @export var camera : Camera2D
 @export var player : CharacterBody2D
+@onready var player_stats : Node = player.get_node("stats")
 
 var power_up_canvas : PackedScene = preload("res://Scenes/power_up_canvas.tscn")
 var pause_menu : PackedScene = preload("res://Scenes/pause_menu.tscn")
 var power_up_inventory : PackedScene = preload("res://Scenes/power_up_inventory.tscn")
 var power_up_control_node : PackedScene = preload("res://Scenes/inventory_control.tscn")
 var inventory_open : bool = false
+var death_screen : PackedScene = preload("res://Scenes/death_screen.tscn")
 
 func _ready():
+	wave_cleared.connect(func(): get_tree().current_scene.get_node("ui_canvas").get_node("ui_control").get_node("wave_number")._on_wave_cleared(waves_cleared))
+	
 	enemies = [melee_01, projectile_01]
-	spawn_wave(6, 10)
+	spawn_wave(2 ** (waves_cleared + 1), 4 ** (waves_cleared + 1))
 
 func spawn_wave(min: int, max: int):
 	var wave_size : int = randi_range(min, max)
@@ -59,8 +69,11 @@ func get_spawn_position():
 
 func _on_enemy_death(enemy):
 	wave_list.erase(enemy)
+	enemies_killed += 1
 	if wave_list.size() == 0:
-		spawn_wave(15, 20)
+		waves_cleared += 1
+		wave_cleared.emit()
+		spawn_wave(2 * (waves_cleared), 4 * (waves_cleared + 1))
 
 func _on_player_level_up():
 	get_tree().paused = true
@@ -108,3 +121,31 @@ func setup_inventory():
 		for tag in power.get_groups():
 			control_parent.tags.append(tag)
 	return inventory
+
+func _on_player_death():
+	session_timer.stop()
+	get_tree().paused = true
+	get_tree().current_scene.get_node("ui_canvas").queue_free()
+	var inventory = setup_inventory()
+	
+	var stats_screen = death_screen.instantiate()
+	stats_screen.get_node("control").get_node("waves_cleared").text = "You Cleared " + str(waves_cleared) + " Waves Of Enemies!"
+	stats_screen.get_node("control").get_node("enemies_killed").text = "Kills: " + str(enemies_killed)
+	var time_alive : String = ""
+	while seconds_alive > 0:
+		if seconds_alive >= 3600:
+			time_alive += str(int(seconds_alive / 3600)) + "h "
+			seconds_alive -= int((seconds_alive / 3600) * 3600)
+		elif seconds_alive >= 60:
+			time_alive += str(int(seconds_alive / 60)) + "m "
+			seconds_alive -= int((seconds_alive / 60) * 60)
+		else:
+			time_alive += str(seconds_alive) + "s"
+			seconds_alive -= seconds_alive
+	stats_screen.get_node("control").get_node("time_alive").text = "Time Alive: " + str(time_alive)
+	
+	add_child(inventory)
+	add_child(stats_screen)
+
+func _on_session_timer_timeout():
+	seconds_alive += 1

@@ -45,7 +45,9 @@ var exp_max : float :
 		exp_changed.emit()
 var exp_gain_multiplier : float = 1.0
 
-var speed : float = 350.0
+var waves_cleared : int = 0
+
+var speed : float = 200.0
 var speed_multiplier : float = 1.0 :
 	set(value):
 		speed_multiplier = value
@@ -66,3 +68,6 @@ var lightning_damage_inc : float = 1.0 :
 		for power in player.power_ups:
 			if power.is_in_group("lightning") && power.is_in_group("attack"):
 				power.damage_inc = lightning_damage_inc
+
+func _on_wave_cleared():
+	waves_cleared += 1

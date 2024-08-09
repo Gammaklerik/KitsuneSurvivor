@@ -51,3 +51,9 @@ melee_01 = ExtResource("4_nh032")
 projectile_01 = ExtResource("5_j6rwd")
 camera = NodePath("../player/main_cam")
 player = NodePath("../player")
+
+[node name="session_timer" type="Timer" parent="game_manager"]
+process_mode = 1
+autostart = true
+
+[connection signal="timeout" from="game_manager/session_timer" to="game_manager" method="_on_session_timer_timeout"]
