@@ -1,0 +1,42 @@
+[gd_scene load_steps=5 format=3 uid="uid://bxeiy5so7nkmw"]
+
+[ext_resource type="Script" path="res://enemies/ushi_oni/poison_gas.gd" id="1_0o2j5"]
+[ext_resource type="Texture2D" uid="uid://bu1nhhjo2l1lw" path="res://enemies/ushi_oni/ushi_oni_gas.png" id="1_h37kd"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vgisq"]
+radius = 16.0312
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_al753"]
+radius = 14.1421
+
+[node name="poison_gas" type="RigidBody2D"]
+collision_layer = 8
+collision_mask = 0
+gravity_scale = 0.0
+lock_rotation = true
+script = ExtResource("1_0o2j5")
+
+[node name="gas_area" type="Area2D" parent="."]
+
+[node name="gas_shape" type="CollisionShape2D" parent="gas_area"]
+shape = SubResource("CircleShape2D_vgisq")
+
+[node name="sprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_h37kd")
+
+[node name="collider" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_al753")
+
+[node name="lifetime" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+autostart = true
+
+[node name="damage_rate" type="Timer" parent="."]
+wait_time = 0.25
+autostart = true
+
+[connection signal="body_entered" from="gas_area" to="." method="_on_gas_area_body_entered"]
+[connection signal="body_exited" from="gas_area" to="." method="_on_gas_area_body_exited"]
+[connection signal="timeout" from="lifetime" to="." method="_on_lifetime_timeout"]
+[connection signal="timeout" from="damage_rate" to="." method="_on_damage_rate_timeout"]

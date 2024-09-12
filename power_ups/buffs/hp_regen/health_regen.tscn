@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://co5cs6vbj0igk"]
+
+[ext_resource type="Script" path="res://power_ups/buffs/hp_regen/health_regen.gd" id="1_gboed"]
+[ext_resource type="Texture2D" uid="uid://cjgkkhm1g7ole" path="res://power_ups/buffs/hp_regen/hp_regen.png" id="2_81kwg"]
+
+[node name="health_regen" type="Node2D" groups=["buff", "health"]]
+script = ExtResource("1_gboed")
+
+[node name="icon" type="Sprite2D" parent="."]
+scale = Vector2(3.5, 3.5)
+texture = ExtResource("2_81kwg")

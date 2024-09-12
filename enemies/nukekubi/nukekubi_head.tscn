@@ -1,0 +1,51 @@
+[gd_scene load_steps=7 format=3 uid="uid://u6apf5a3c6v6"]
+
+[ext_resource type="Texture2D" uid="uid://bkj7vaaujuho1" path="res://enemies/nukekubi/nukekubi_placeholder.png" id="1_hifr0"]
+[ext_resource type="Script" path="res://enemies/nukekubi/nukekubi_head.gd" id="1_kbuid"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i34cc"]
+atlas = ExtResource("1_hifr0")
+region = Rect2(70, 0, 25, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ogel0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i34cc")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_whvkg"]
+radius = 7.07107
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_y4d5b"]
+radius = 18.0278
+
+[node name="nukekubi_head" type="RigidBody2D" groups=["enemy"]]
+collision_layer = 6
+collision_mask = 0
+gravity_scale = 0.0
+lock_rotation = true
+script = ExtResource("1_kbuid")
+
+[node name="sprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(4, 3)
+sprite_frames = SubResource("SpriteFrames_ogel0")
+
+[node name="collider" type="CollisionShape2D" parent="."]
+position = Vector2(0, -2)
+shape = SubResource("CircleShape2D_whvkg")
+
+[node name="attack_area" type="Area2D" parent="."]
+
+[node name="attack_collider" type="CollisionShape2D" parent="attack_area"]
+shape = SubResource("CircleShape2D_y4d5b")
+debug_color = Color(1, 0, 0, 0.419608)
+
+[node name="nav_agent" type="NavigationAgent2D" parent="."]
+target_desired_distance = 50.0
+
+[connection signal="body_entered" from="attack_area" to="." method="_on_attack_area_body_entered"]

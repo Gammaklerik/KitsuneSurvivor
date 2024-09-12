@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://cxbccnpjlxobc"]
+
+[ext_resource type="Script" path="res://power_ups/attacks/area_of_effect/dancing_flames/dancing_flames_aoe.gd" id="1_7bxs7"]
+
+[node name="dancing_flames_aoe" type="Area2D"]
+collision_layer = 6
+collision_mask = 6
+script = ExtResource("1_7bxs7")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

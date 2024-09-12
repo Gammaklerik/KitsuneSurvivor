@@ -1,28 +1,29 @@
-res://Scenes/enemy_test.tscn::7ae37ea0b2a330a364798b6489f3b43e::1720026582::res://.godot/exported/133200997/export-d4a1cf146f5b3d1396c4992020dcf4cf-enemy_test.scn
-res://Scenes/level.tscn::71b168cf3bd23a4c46dbe21e50510fb8::1723048220::res://.godot/exported/133200997/export-509c53c765b75d897e8314a88ec6c376-level.scn
-res://Scenes/main_menu.tscn::a3a3ab6ee0d9c180ac57d8bf8decf1d2::1722273351::res://.godot/exported/133200997/export-502e6a9b269597544b234abf28958cd8-main_menu.scn
-res://Scenes/melee_enemy.tscn::7d10d5645025c02dd92ea0bda5a7781d::1723048220::res://.godot/exported/133200997/export-7dbf4ae76043d95804cc81b1467b046d-melee_enemy.scn
-res://Scenes/pause_menu.tscn::fc1e856d957c61661d34e0350239fdd6::1723048220::res://.godot/exported/133200997/export-e3d0420ddeb812b15edf3553f5556843-pause_menu.scn
-res://Scenes/player.tscn::d3368eaf5090473ae9bdfff5f3600eed::1723048220::res://.godot/exported/133200997/export-1753c997600d68ab5d20ae99fddb15c6-player.scn
-res://Scenes/player_stats.tscn::6b855cd7510d3c5259db692cada19d8b::1723048220::res://.godot/exported/133200997/export-ddba44828324da8152fdee5901942440-player_stats.scn
-res://Scenes/power_up_canvas.tscn::af97e837a248d2f1f2f495692514f51a::1723048220::res://.godot/exported/133200997/export-4c1a655e16ca89f0ffba356f9138ed7d-power_up_canvas.scn
-res://Scenes/settings_menu.tscn::270a52d1b0eb40cd0fce925b99738b51::1723048220::res://.godot/exported/133200997/export-720abb139b32760e6890550d60fd22c2-settings_menu.scn
-res://Scenes/ui_canvas.tscn::cf3dceee37c5d3c715b3089dc16c4432::1723048220::res://.godot/exported/133200997/export-1d0d94bf218e6c75dcc4ba387c9b894d-ui_canvas.scn
-res://Scenes/Power Ups/Attacks/fireblast.tscn::6742891040845a1dd888002a254d451f::1723048220::res://.godot/exported/133200997/export-85ccd54c8799341d2c347619376a99c8-fireblast.scn
-res://Scenes/Power Ups/Attacks/fireblast_aoe.tscn::35ffdbf4733cae32517dc9e9704a75c4::1722530824::res://.godot/exported/133200997/export-1081f98ff72351f7b658d67522969d86-fireblast_aoe.scn
-res://Scenes/Power Ups/Attacks/firebolt.tscn::8672f04ea9a1c5570a01e558b6489d48::1722533559::res://.godot/exported/133200997/export-9f2a63aca0fcb47557bb27da0901e6ee-firebolt.scn
-res://Scenes/Power Ups/Attacks/firebolt_projectile.tscn::d474149d94ab69cd306d15f19f67eaee::1722533559::res://.godot/exported/133200997/export-2886783f403041b59fbd205f8f02cbbf-firebolt_projectile.scn
-res://Scenes/Power Ups/Attacks/kunai_projectile.tscn::5d92f730e68c3caa53aa955e96287ce2::1722446675::res://.godot/exported/133200997/export-d54e123a6697ca39599c8d274dad4c10-kunai_projectile.scn
-res://Scenes/Power Ups/Attacks/kunai_throw.tscn::89299e4575ca23962d46ffb627b06a33::1722455359::res://.godot/exported/133200997/export-96cd957a61d307d134334454e18e0826-kunai_throw.scn
-res://Scenes/Power Ups/Attacks/lightning_bolt.tscn::30492f31d24565825eb58e36de69da0e::1722533559::res://.godot/exported/133200997/export-c22fc993c3354a86c1b159b111ab1431-lightning_bolt.scn
-res://Scenes/Power Ups/Attacks/lightning_bolt_beam.tscn::f833307d9e1a161ac638dd1725e0f666::1722359958::res://.godot/exported/133200997/export-e2c83a9bcb4cbf8747db9973ddef0f84-lightning_bolt_beam.scn
-res://Scenes/Power Ups/Buffs/defence_boost.tscn::0f67c27173a12319f58fc914bce15e04::1722533559::res://.godot/exported/133200997/export-289915725e882ad50d3a2eccb41088e6-defence_boost.scn
-res://Scenes/Power Ups/Buffs/fire_damage_boost.tscn::4decc255e4b5fded23d46afe28a6e749::1722537517::res://.godot/exported/133200997/export-13028672c8f58b954681eb2c33593a1e-fire_damage_boost.scn
-res://Scenes/Power Ups/Buffs/hp_up.tscn::94e5269596d03e41d8db2eb7f11aa984::1722455359::res://.godot/exported/133200997/export-cdf9fd941c65dbeb15794f6a835c8552-hp_up.scn
-res://Scenes/Power Ups/Buffs/speed_boost.tscn::24b6d684c51713cd1182dc13e216c519::1722533559::res://.godot/exported/133200997/export-cdafd141328ccfafcc9904656509074f-speed_boost.scn
-res://Scenes/damage_popup.tscn::a9cd8032f4d23223ef0bde0bf82ad04d::1722446675::res://.godot/exported/133200997/export-654c711c01fbd810f9065b66a60184b9-damage_popup.scn
-res://Scenes/description_panel.tscn::21e10864a2f728a1c485ff589754f968::1723048220::res://.godot/exported/133200997/export-5033a402239cd6b021cdcb1e17a63afd-description_panel.scn
-res://Scenes/enemy_projectile.tscn::0e1f47857a7aa0a1936fb480d88d1469::1722533559::res://.godot/exported/133200997/export-710b0e98765948d309221ea4a8f2a3fd-enemy_projectile.scn
-res://Scenes/inventory_control.tscn::43c1452f3bfaead3b7a664f647f54264::1723048220::res://.godot/exported/133200997/export-8457e1f12e0aef5bd99bd555b42a1414-inventory_control.scn
-res://Scenes/power_up_inventory.tscn::8c062438058672cfe6f94152b10596f5::1723048220::res://.godot/exported/133200997/export-7333d2427768cf85eb15f2228c0404c0-power_up_inventory.scn
-res://Scenes/projectile_enemy.tscn::d8c7b70fbd43316a9e7ed77153ff6fae::1722533559::res://.godot/exported/133200997/export-83a614b013e3eb5a56aec8a18c6375df-projectile_enemy.scn
+res://enemies/basan/basan.tscn::d7e4c140ec47ff6b614e9c616f10b63b::1723745720::res://.godot/exported/133200997/export-be552d839306e0285e27630e0432d270-basan.scn
+res://enemies/gashadokuro/gashadokuro.tscn::c47443ba013e995cd72c360d23636c7f::1723745721::res://.godot/exported/133200997/export-dc6da6c75ec3466a21f6e14ebe914fd4-gashadokuro.scn
+res://enemies/kamaitachi/kamaitachi.tscn::a856963300187d5cdf1598b782b31a37::1723745720::res://.godot/exported/133200997/export-af437cc18d3b0e58462e3d57f89c214b-kamaitachi.scn
+res://enemies/damage_popup.tscn::1638971dbde200cd6be7973f75529dea::1723569981::res://.godot/exported/133200997/export-1fa43f0b0ee9a43dd41b21271e145b97-damage_popup.scn
+res://game/player/player.tscn::86d31d5a62083c460b9858842b8a31f3::1723745721::res://.godot/exported/133200997/export-4dc4d4595ce8692af9c7d1643d47a3b1-player.scn
+res://game/player/player_stats.tscn::7a644f0b5457f6374ff4010c854d1f34::1723571591::res://.godot/exported/133200997/export-eacc6590bfeebd3d71a597b869cecce6-player_stats.scn
+res://game/health_drop.tscn::318705975f8a75930566a07edea82d0a::1723745721::res://.godot/exported/133200997/export-c2fa22adeb6e7d53c9fd2c5992132af1-health_drop.scn
+res://game/level.tscn::848a1207a161f274e5003c2db0df4f2c::1723745734::res://.godot/exported/133200997/export-8116b63db59cb406f8d5abbeb38653de-level.scn
+res://power_ups/attacks/area_of_effect/fireblast/fireblast.tscn::761c6c08e8d2e8e7352d3b6183510c83::1723742610::res://.godot/exported/133200997/export-d76f0e8bcc17ced08bfbd4e498ddba04-fireblast.scn
+res://power_ups/attacks/area_of_effect/fireblast/fireblast_aoe.tscn::8ba6249aab83434b594e4bdbefa3286d::1723742636::res://.godot/exported/133200997/export-15a1172d24970cc85e587e351eb0a3ec-fireblast_aoe.scn
+res://power_ups/attacks/beam/lightning_bolt/lightning_bolt.tscn::ccf22827082137bef5539745e206a5f0::1723742640::res://.godot/exported/133200997/export-cba21a8d748dd694bd1b8a5f330a486e-lightning_bolt.scn
+res://power_ups/attacks/beam/lightning_bolt/lightning_bolt_beam.tscn::4952b82fa5aed1c5e6731effd429b25a::1723656047::res://.godot/exported/133200997/export-5900b3895a95fb9cf925cebb6cf9a2a5-lightning_bolt_beam.scn
+res://power_ups/attacks/projectile/firebolt/firebolt.tscn::a1f7ace640fadd70be946129a97b4435::1723742651::res://.godot/exported/133200997/export-2bfa058b9044835835dd56b99e27e09e-firebolt.scn
+res://power_ups/attacks/projectile/firebolt/firebolt_projectile.tscn::b937e6c74db056f1382e2c3f55c39109::1723742651::res://.godot/exported/133200997/export-e5bad5bee5137687d3e93fe64e99138d-firebolt_projectile.scn
+res://power_ups/attacks/projectile/kunai/kunai.tscn::9289f8b240fd8920e1960eff1fc1438e::1723742653::res://.godot/exported/133200997/export-1667794001551a112f3fe9753e1ada4f-kunai.scn
+res://power_ups/attacks/projectile/kunai/kunai_projectile.tscn::0bffe5e414fda844e421ac9fd0478af4::1723742653::res://.godot/exported/133200997/export-718aff19d06f9e8230cc3543106e66bc-kunai_projectile.scn
+res://power_ups/buffs/defense_boost/defence_boost.tscn::4c0d017b97a6cd88d3fadb2eb944d838::1723742665::res://.godot/exported/133200997/export-57d5d35eb0ca94f343db2bc5001e126b-defence_boost.scn
+res://power_ups/buffs/fire_damage_boost/fire_damage_boost.tscn::2c02c5b47c787817bbcf4e61216a33a3::1723742662::res://.godot/exported/133200997/export-ef8de241af57526e51a4906998943fc3-fire_damage_boost.scn
+res://power_ups/buffs/hp_up/hp_up.tscn::44dec3ff88c92df0882e045d518cd85f::1723742668::res://.godot/exported/133200997/export-53a99c130647239275d5dae4024b27c6-hp_up.scn
+res://power_ups/buffs/speed_boost/speed_boost.tscn::676b41264da4e4436d0661ee466c5e04::1723742659::res://.godot/exported/133200997/export-357bc6a999194cf04d42badecdc5927d-speed_boost.scn
+res://ui/in_game/level_up/level_up_canvas.tscn::591b3790b1a70e9a097cef537861f65b::1723742636::res://.godot/exported/133200997/export-85e1d7f5cf2d4feec4582c08d0bb0313-level_up_canvas.scn
+res://ui/in_game/lose_screen/death_screen.tscn::9c8eee06993a8bfa6e8ffccafd5c775b::1723569684::res://.godot/exported/133200997/export-8169f2fceb53acbfccd9729cc8e64c77-death_screen.scn
+res://ui/in_game/pause_menu/pause_menu.tscn::f933dcc6163f505b44c234c33fad35c0::1723569670::res://.godot/exported/133200997/export-9c687db58019300a6362b3b461c8ec34-pause_menu.scn
+res://ui/in_game/player/inventory/description_panel.tscn::d6ee4bf94b33ce28852697f3389d0240::1723742651::res://.godot/exported/133200997/export-791bb00754c7d04cfa6154b42ba9bcfb-description_panel.scn
+res://ui/in_game/player/inventory/inventory_control.tscn::bc57aba92d7948614414ddd340b2708b::1723569785::res://.godot/exported/133200997/export-aa7d86eb4f5d0cfc74adb75515ed9598-inventory_control.scn
+res://ui/in_game/player/inventory/player_inventory.tscn::b84d9615a3e92ecac7ec771930fd3b06::1723221665::res://.godot/exported/133200997/export-b9b7ef7eac9cc990be3718935b17e52a-player_inventory.scn
+res://ui/in_game/player/player_ui.tscn::5f7af281204fe759c53bb7bf247c9de2::1723569675::res://.godot/exported/133200997/export-692a69fef5e25190739f9aa54b67b22b-player_ui.scn
+res://ui/main_menu/main_menu.tscn::47cba945eac5d1880dac2b239920099b::1723745720::res://.godot/exported/133200997/export-e4e7be6a8478e426437c5048574855e9-main_menu.scn
+res://ui/settings_menu/settings_menu.tscn::b06a77446950bc63588ece91fd2ffba6::1723569696::res://.godot/exported/133200997/export-57987151cc7808172b41e59f751472d3-settings_menu.scn

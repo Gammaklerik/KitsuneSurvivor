@@ -1,0 +1,61 @@
+[gd_scene load_steps=6 format=3 uid="uid://xjbqc0neqack"]
+
+[ext_resource type="Script" path="res://enemies/oni/oni.gd" id="1_brmpv"]
+[ext_resource type="Texture2D" uid="uid://cnglestqqs7ku" path="res://enemies/oni/oni.png" id="1_c1cif"]
+[ext_resource type="PackedScene" uid="uid://b7rr7bh3betwa" path="res://enemies/ui_elements.tscn" id="2_a3730"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xoulk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_c1cif")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_a6fbb"]
+radius = 8.0
+
+[node name="oni" type="RigidBody2D" groups=["enemy"]]
+process_mode = 1
+collision_layer = 6
+collision_mask = 0
+gravity_scale = 0.0
+lock_rotation = true
+script = ExtResource("1_brmpv")
+
+[node name="sprite" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_xoulk")
+
+[node name="collider" type="CollisionShape2D" parent="."]
+position = Vector2(1, 1)
+shape = SubResource("CapsuleShape2D_a6fbb")
+
+[node name="nav_agent" type="NavigationAgent2D" parent="."]
+target_desired_distance = 50.0
+
+[node name="ui_elements" parent="." instance=ExtResource("2_a3730")]
+offset_left = -45.0
+offset_top = -48.0
+offset_right = 39.0
+offset_bottom = 35.0
+
+[node name="attack_area" type="Area2D" parent="."]
+
+[node name="attack_col" type="CollisionPolygon2D" parent="attack_area"]
+polygon = PackedVector2Array(0, 0, -38, -50, -38, 50)
+
+[node name="attack_range" type="Area2D" parent="."]
+
+[node name="range_collider" type="CollisionPolygon2D" parent="attack_range"]
+polygon = PackedVector2Array(0, 0, -38, -50, -38, 50)
+
+[node name="atk_anim" type="Timer" parent="."]
+wait_time = 0.75
+one_shot = true
+
+[connection signal="enemy_killed" from="." to="." method="_on_enemy_killed"]
+[connection signal="body_entered" from="attack_area" to="." method="_on_attack_area_body_entered"]
+[connection signal="body_entered" from="attack_range" to="." method="_on_attack_range_body_entered"]

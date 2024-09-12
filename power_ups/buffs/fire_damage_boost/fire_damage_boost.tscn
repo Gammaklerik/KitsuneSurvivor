@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://b72pnup58x0xg"]
+
+[ext_resource type="Script" path="res://power_ups/buffs/fire_damage_boost/fire_damage_boost.gd" id="1_a3fpc"]
+[ext_resource type="Texture2D" uid="uid://c5gufuvrjhqsj" path="res://power_ups/buffs/fire_damage_boost/fire_boost_icon.png" id="2_k2gmu"]
+
+[node name="fire_damage_boost" type="Node2D" groups=["buff", "fire"]]
+script = ExtResource("1_a3fpc")
+
+[node name="icon" type="Sprite2D" parent="."]
+scale = Vector2(3.5, 3.5)
+texture = ExtResource("2_k2gmu")

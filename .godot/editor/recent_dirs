@@ -1,11 +1,18 @@
-res://Scripts/UI
-res://Scenes
-res://Assets/Sprites
-res://Scripts
-C:/Users/Gavin/Documents/GitHub/KitsuneSurvivor
+res://game/player
+res://power_ups/attacks/melee/katana
+res://power_ups/attacks/area_of_effect/dancing_flames
+res://power_ups/buffs/serrated_blades
+res://enemies/maikibi
+res://enemies/oni
+res://enemies/harionago
+res://enemies
+res://enemies/ushi_oni
+res://power_ups/attacks/beam/lightning_bolt
+res://enemies/nukekubi
 C:/Users/Gavin/Downloads
-res://Scenes/Power Ups/Attacks
-res://Scripts/Power Ups/Attacks
-res://Scenes/Power Ups/Buffs
-res://Scripts/Power Ups/Buffs
+C:/Users/Gavin/Documents/GitHub/KitsuneSurvivor
+res://enemies/gashadokuro
+res://game
+res://script_templates/Node2D
+res://script_templates
 res://

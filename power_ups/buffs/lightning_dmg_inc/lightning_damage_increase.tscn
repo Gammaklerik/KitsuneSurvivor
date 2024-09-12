@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://bp01l87lse1k5"]
+
+[ext_resource type="Texture2D" uid="uid://dtws7i7yohpun" path="res://power_ups/buffs/lightning_dmg_inc/lightning_inc.png" id="1_bnikw"]
+[ext_resource type="Script" path="res://power_ups/buffs/lightning_dmg_inc/lightning_damage_increase.gd" id="1_yxalp"]
+
+[node name="lightning_damage_increase" type="Node2D" groups=["buff", "lightning"]]
+script = ExtResource("1_yxalp")
+
+[node name="icon" type="Sprite2D" parent="."]
+scale = Vector2(3.5, 3.5)
+texture = ExtResource("1_bnikw")

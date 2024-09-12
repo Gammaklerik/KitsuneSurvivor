@@ -1,0 +1,66 @@
+[gd_scene load_steps=7 format=3 uid="uid://j85wj1ydoba0"]
+
+[ext_resource type="Script" path="res://enemies/basan/basan.gd" id="1_b7bfv"]
+[ext_resource type="PackedScene" uid="uid://ckhsinsgtk3w8" path="res://enemies/damage_popup.tscn" id="2_0ri2x"]
+[ext_resource type="Texture2D" uid="uid://mcfid6fao31v" path="res://enemies/basan/basan.png" id="3_guli3"]
+[ext_resource type="PackedScene" uid="uid://b7rr7bh3betwa" path="res://enemies/ui_elements.tscn" id="4_vfnpu"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xillm"]
+radius = 11.0
+height = 42.0
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_yb3qk"]
+
+[node name="basan" type="RigidBody2D" groups=["enemy"]]
+process_mode = 1
+collision_layer = 6
+collision_mask = 0
+gravity_scale = 0.0
+lock_rotation = true
+script = ExtResource("1_b7bfv")
+damage_number_popup = ExtResource("2_0ri2x")
+
+[node name="col" type="CollisionShape2D" parent="."]
+position = Vector2(1, 0)
+shape = SubResource("CapsuleShape2D_xillm")
+
+[node name="sprite" type="Sprite2D" parent="."]
+position = Vector2(4, -2)
+texture = ExtResource("3_guli3")
+
+[node name="nav_agent" type="NavigationAgent2D" parent="."]
+target_desired_distance = 25.0
+debug_path_custom_color = Color(0, 0, 1, 1)
+
+[node name="run_timer" type="Timer" parent="."]
+wait_time = 4.5
+one_shot = true
+
+[node name="proximity_area" type="Area2D" parent="."]
+
+[node name="proximity" type="CollisionPolygon2D" parent="proximity_area"]
+position = Vector2(-11, -5)
+polygon = PackedVector2Array(-93, -48, -93, 48, 0, 0)
+
+[node name="fire" type="Sprite2D" parent="proximity_area"]
+visible = false
+position = Vector2(-46.25, 0.5)
+scale = Vector2(93.5, 97)
+texture = SubResource("PlaceholderTexture2D_yb3qk")
+
+[node name="dmg_tick" type="Timer" parent="proximity_area"]
+wait_time = 0.25
+
+[node name="animation_timer" type="Timer" parent="."]
+wait_time = 0.25
+one_shot = true
+
+[node name="ui_elements" parent="." instance=ExtResource("4_vfnpu")]
+offset_top = -57.0
+offset_bottom = 26.0
+
+[connection signal="enemy_killed" from="." to="." method="_on_enemy_killed"]
+[connection signal="timeout" from="run_timer" to="." method="_on_run_timer_timeout"]
+[connection signal="body_entered" from="proximity_area" to="." method="_on_proximity_area_body_entered"]
+[connection signal="timeout" from="proximity_area/dmg_tick" to="." method="_on_dmg_tick_timeout"]
+[connection signal="timeout" from="animation_timer" to="." method="_on_animation_timer_timeout"]

@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=3 uid="uid://bd1hkso3e2r2u"]
+
+[ext_resource type="Script" path="res://power_ups/attacks/area_of_effect/firebolt/firebolt_aoe.gd" id="1_2bbbn"]
+[ext_resource type="Texture2D" uid="uid://bj4ll1b7kt0ja" path="res://power_ups/attacks/area_of_effect/firebolt/placeholder_projectile.png" id="2_bvjmw"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rk4uf"]
+radius = 74.0068
+
+[node name="area_of_effect" type="Area2D" node_paths=PackedStringArray("effect_timer")]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_2bbbn")
+effect_timer = NodePath("effect_timer")
+
+[node name="area" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_rk4uf")
+
+[node name="aoe_sprite" type="Sprite2D" parent="."]
+position = Vector2(4, -9)
+scale = Vector2(3.83333, 3.77778)
+texture = ExtResource("2_bvjmw")
+
+[node name="effect_timer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+autostart = true
+
+[node name="damage_rate" type="Timer" parent="."]
+wait_time = 0.3
+autostart = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
+[connection signal="timeout" from="effect_timer" to="." method="_on_effect_timer_timeout"]
+[connection signal="timeout" from="damage_rate" to="." method="_on_damage_rate_timeout"]

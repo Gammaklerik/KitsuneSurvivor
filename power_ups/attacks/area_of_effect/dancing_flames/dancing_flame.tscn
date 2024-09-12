@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://cs2q14f673hds"]
+
+[ext_resource type="Texture2D" uid="uid://lgwt2xt2p6nh" path="res://power_ups/attacks/area_of_effect/dancing_flames/dancing_flame.png" id="1_tce4p"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gdehx"]
+height = 32.0
+
+[node name="dancing_flame" type="CollisionShape2D"]
+shape = SubResource("CapsuleShape2D_gdehx")
+
+[node name="sprite" type="Sprite2D" parent="."]
+position = Vector2(0, -7)
+scale = Vector2(3.5, 3.5)
+texture = ExtResource("1_tce4p")

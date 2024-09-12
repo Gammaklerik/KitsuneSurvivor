@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://dsljf2q1fv6l0"]
+
+[ext_resource type="Script" path="res://power_ups/buffs/hp_up/hp_up.gd" id="1_33gkx"]
+[ext_resource type="Texture2D" uid="uid://dnq4dyy3bqf0v" path="res://power_ups/buffs/hp_up/hp_up_icon.png" id="2_bkwbq"]
+
+[node name="hp_up" type="Node2D" groups=["buff"]]
+script = ExtResource("1_33gkx")
+
+[node name="icon" type="Sprite2D" parent="."]
+scale = Vector2(3.5, 3.5)
+texture = ExtResource("2_bkwbq")

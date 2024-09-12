@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://dkxx3eby853gs"]
+
+[ext_resource type="Script" path="res://power_ups/attacks/area_of_effect/dancing_flames/dancing_flames.gd" id="1_gvkeb"]
+[ext_resource type="Texture2D" uid="uid://bdokoxu0wgt7i" path="res://power_ups/attacks/area_of_effect/dancing_flames/dancing_flames.png" id="1_xd6e5"]
+
+[node name="dancing_flames" type="Node2D" groups=["aoe", "attack", "fire"]]
+script = ExtResource("1_gvkeb")
+
+[node name="icon" type="Sprite2D" parent="."]
+scale = Vector2(3.5, 3.5)
+texture = ExtResource("1_xd6e5")

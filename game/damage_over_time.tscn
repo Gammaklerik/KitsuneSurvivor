@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://ckut3t5fg1x78"]
+
+[ext_resource type="Script" path="res://game/damage_over_time.gd" id="1_bhrnv"]
+
+[node name="damage_over_time" type="Node"]
+script = ExtResource("1_bhrnv")
+
+[node name="duration" type="Timer" parent="."]
+
+[node name="rate" type="Timer" parent="."]
+
+[connection signal="timeout" from="duration" to="." method="_on_duration_timeout"]
+[connection signal="timeout" from="rate" to="." method="_on_rate_timeout"]

@@ -1,0 +1,71 @@
+[gd_scene load_steps=9 format=3 uid="uid://c6s4g4us87dt6"]
+
+[ext_resource type="Script" path="res://enemies/nukekubi/nukekubi.gd" id="1_l1lod"]
+[ext_resource type="Texture2D" uid="uid://bkj7vaaujuho1" path="res://enemies/nukekubi/nukekubi_placeholder.png" id="1_tjsds"]
+[ext_resource type="PackedScene" uid="uid://b7rr7bh3betwa" path="res://enemies/ui_elements.tscn" id="3_v15qo"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u1n43"]
+atlas = ExtResource("1_tjsds")
+region = Rect2(0, 0, 25, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pnyu3"]
+atlas = ExtResource("1_tjsds")
+region = Rect2(35, 0, 25, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_prigw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u1n43")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pnyu3")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_m0pnq"]
+radius = 6.0
+height = 26.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gbf65"]
+radius = 79.0063
+
+[node name="nukekubi" type="RigidBody2D" groups=["enemy"]]
+collision_layer = 6
+collision_mask = 0
+gravity_scale = 0.0
+lock_rotation = true
+script = ExtResource("1_l1lod")
+
+[node name="sprite" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_prigw")
+
+[node name="collider" type="CollisionShape2D" parent="."]
+position = Vector2(2, 3)
+shape = SubResource("CapsuleShape2D_m0pnq")
+
+[node name="detection_area" type="Area2D" parent="."]
+process_mode = 1
+
+[node name="detection_shape" type="CollisionShape2D" parent="detection_area"]
+position = Vector2(2, 0)
+shape = SubResource("CircleShape2D_gbf65")
+debug_color = Color(1, 0, 0, 0.419608)
+
+[node name="nav_agent" type="NavigationAgent2D" parent="."]
+target_desired_distance = 25.0
+
+[node name="anim_timer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[node name="ui_elements" parent="." instance=ExtResource("3_v15qo")]
+offset_top = -46.0
+offset_bottom = 37.0
+
+[connection signal="enemy_killed" from="." to="." method="_on_enemy_killed"]
+[connection signal="body_entered" from="detection_area" to="." method="_on_detection_area_body_entered"]
+[connection signal="timeout" from="anim_timer" to="." method="_on_anim_timer_timeout"]

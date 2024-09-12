@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://fucd3bogwjjn"]
+
+[ext_resource type="Script" path="res://power_ups/buffs/speed_boost/speed_boost.gd" id="1_3wnjt"]
+[ext_resource type="Texture2D" uid="uid://dtr6cjmbylwrb" path="res://power_ups/buffs/speed_boost/speed_boost_icon.png" id="2_qqy33"]
+
+[node name="speed_boost" type="Node2D" groups=["buff"]]
+script = ExtResource("1_3wnjt")
+
+[node name="icon" type="Sprite2D" parent="."]
+scale = Vector2(3.5, 3.5)
+texture = ExtResource("2_qqy33")

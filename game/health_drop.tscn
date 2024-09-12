@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://cydybubb7gj8s"]
+
+[ext_resource type="Script" path="res://game/health_drop.gd" id="1_vp168"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_bxy0a"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_a4e5i"]
+radius = 5.89854
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_oagcl"]
+radius = 0.927139
+
+[node name="health_drop" type="Sprite2D"]
+scale = Vector2(19.5, 17.5)
+texture = SubResource("PlaceholderTexture2D_bxy0a")
+script = ExtResource("1_vp168")
+
+[node name="range_area" type="Area2D" parent="."]
+
+[node name="range_shape" type="CollisionShape2D" parent="range_area"]
+shape = SubResource("CircleShape2D_a4e5i")
+
+[node name="pickup_range" type="Area2D" parent="."]
+process_mode = 1
+
+[node name="pickup_shape" type="CollisionShape2D" parent="pickup_range"]
+shape = SubResource("CircleShape2D_oagcl")
+
+[connection signal="body_entered" from="range_area" to="." method="_on_range_area_body_entered"]
+[connection signal="body_entered" from="pickup_range" to="." method="_on_pickup_range_body_entered"]

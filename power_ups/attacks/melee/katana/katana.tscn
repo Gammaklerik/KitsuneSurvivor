@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://dsgec67jdygi0"]
+
+[ext_resource type="Script" path="res://power_ups/attacks/melee/katana/katana.gd" id="1_e3a35"]
+[ext_resource type="Texture2D" uid="uid://dlrhuoq8qqj5r" path="res://power_ups/attacks/melee/katana/katana.png" id="1_frj5h"]
+
+[node name="katana" type="Node2D" groups=["attack", "melee", "physical"]]
+script = ExtResource("1_e3a35")
+
+[node name="icon" type="Sprite2D" parent="."]
+scale = Vector2(3.5, 3.5)
+texture = ExtResource("1_frj5h")

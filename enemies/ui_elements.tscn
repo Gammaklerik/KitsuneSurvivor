@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=3 uid="uid://b7rr7bh3betwa"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_td75k"]
+bg_color = Color(1, 0.0901961, 0.145098, 1)
+
+[sub_resource type="Theme" id="Theme_p2t5t"]
+HSlider/styles/grabber_area = SubResource("StyleBoxFlat_td75k")
+
+[sub_resource type="ImageTexture" id="ImageTexture_aeb2r"]
+
+[node name="ui_elements" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -42.0
+offset_top = -42.0
+offset_right = 42.0
+offset_bottom = 41.0
+
+[node name="health_bar" type="HSlider" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.265
+anchor_right = 0.5
+anchor_bottom = 0.265
+offset_left = -20.0
+offset_top = -4.995
+offset_right = 28.0
+offset_bottom = 11.005
+grow_horizontal = 2
+theme = SubResource("Theme_p2t5t")
+theme_override_icons/grabber_disabled = SubResource("ImageTexture_aeb2r")
+value = 10.0
+editable = false
+scrollable = false

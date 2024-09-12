@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://c23kty3hin0wi"]
+
+[ext_resource type="Script" path="res://power_ups/attacks/beam/lightning_bolt/lightning_bolt.gd" id="1_kjalm"]
+[ext_resource type="Texture2D" uid="uid://baow7mxpvpj0x" path="res://power_ups/attacks/beam/lightning_bolt/lightning_bolt_icon.png" id="2_noblw"]
+
+[node name="lightning_bolt" type="Node2D" groups=["attack", "beam", "lightning", "ranged"]]
+script = ExtResource("1_kjalm")
+
+[node name="icon" type="Sprite2D" parent="."]
+scale = Vector2(3.5, 3.5)
+texture = ExtResource("2_noblw")

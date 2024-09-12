@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://bmv4y70ewyydo"]
+
+[ext_resource type="Texture2D" uid="uid://bmnsf7eto675j" path="res://power_ups/buffs/serrated_blades/serrated_blades.png" id="1_jjdov"]
+[ext_resource type="Script" path="res://power_ups/buffs/serrated_blades/serrated_blades.gd" id="1_xxg6g"]
+
+[node name="serrated_blades" type="Node2D" groups=["buff", "physical"]]
+script = ExtResource("1_xxg6g")
+
+[node name="icon" type="Sprite2D" parent="."]
+scale = Vector2(3.5, 3.5)
+texture = ExtResource("1_jjdov")

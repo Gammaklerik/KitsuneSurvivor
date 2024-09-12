@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://dg1kgi86yqsdw"]
+
+[ext_resource type="Script" path="res://power_ups/attacks/beam/lightning_bolt/branch.gd" id="1_evtt8"]
+
+[node name="branch_particles" type="CPUParticles2D"]
+amount = 20
+lifetime = 0.3
+speed_scale = 2.0
+lifetime_randomness = 0.35
+emission_shape = 1
+emission_sphere_radius = 3.75
+gravity = Vector2(0, -35)
+angle_min = -342.9
+angle_max = 274.3
+scale_amount_max = 1.5
+color = Color(0.737255, 0.964706, 1, 1)
+script = ExtResource("1_evtt8")

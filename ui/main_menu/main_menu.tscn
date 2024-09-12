@@ -1,0 +1,124 @@
+[gd_scene load_steps=16 format=3 uid="uid://bm6ppes74wk1h"]
+
+[ext_resource type="Script" path="res://ui/main_menu/main_menu.gd" id="1_7wkso"]
+[ext_resource type="Texture2D" uid="uid://7hi70ovf7k3g" path="res://sprites/button_normal.png" id="2_nkmc3"]
+[ext_resource type="Texture2D" uid="uid://bca3k08e10j22" path="res://sprites/button_hover.png" id="3_47c6l"]
+[ext_resource type="Texture2D" uid="uid://duatns6hyih11" path="res://sprites/button_pressed.png" id="4_t1h3g"]
+
+[sub_resource type="Theme" id="Theme_e84vn"]
+default_font_size = 65
+
+[sub_resource type="Theme" id="Theme_p63fq"]
+default_font_size = 45
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uouo8"]
+texture = ExtResource("2_nkmc3")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6bnh5"]
+texture = ExtResource("3_47c6l")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m441f"]
+texture = ExtResource("4_t1h3g")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yv8em"]
+texture = ExtResource("2_nkmc3")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_isehx"]
+texture = ExtResource("3_47c6l")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hety0"]
+texture = ExtResource("4_t1h3g")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1u08y"]
+texture = ExtResource("2_nkmc3")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7i7pe"]
+texture = ExtResource("3_47c6l")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ri5t7"]
+texture = ExtResource("4_t1h3g")
+
+[node name="main_menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7wkso")
+
+[node name="title_label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -251.5
+offset_top = 36.0
+offset_right = 251.5
+offset_bottom = 126.0
+grow_horizontal = 2
+theme = SubResource("Theme_e84vn")
+text = "Kitsune Survival"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="play_button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -132.5
+offset_top = -186.0
+offset_right = 132.5
+offset_bottom = -68.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_p63fq")
+theme_override_styles/normal = SubResource("StyleBoxTexture_uouo8")
+theme_override_styles/hover = SubResource("StyleBoxTexture_6bnh5")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_m441f")
+text = "Play"
+
+[node name="settings_button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -132.5
+offset_top = -59.0
+offset_right = 132.5
+offset_bottom = 59.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_p63fq")
+theme_override_styles/normal = SubResource("StyleBoxTexture_yv8em")
+theme_override_styles/hover = SubResource("StyleBoxTexture_isehx")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_hety0")
+text = "Settings"
+
+[node name="quit_game_button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -132.5
+offset_top = 70.0
+offset_right = 132.5
+offset_bottom = 188.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_p63fq")
+theme_override_styles/normal = SubResource("StyleBoxTexture_1u08y")
+theme_override_styles/hover = SubResource("StyleBoxTexture_7i7pe")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ri5t7")
+text = "Quit Game"
+
+[connection signal="pressed" from="play_button" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="settings_button" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="quit_game_button" to="." method="_on_quit_game_button_pressed"]

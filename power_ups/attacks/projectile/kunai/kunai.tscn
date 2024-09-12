@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://rr8ih0fbenh4"]
+
+[ext_resource type="Script" path="res://power_ups/attacks/projectile/kunai/kunai.gd" id="1_a6j5t"]
+[ext_resource type="Texture2D" uid="uid://76wroplm6f0" path="res://power_ups/attacks/projectile/kunai/kunai_icon.png" id="3_xqd5k"]
+
+[node name="kunai_throw" type="Node2D" groups=["attack", "physical", "projectile", "ranged"]]
+script = ExtResource("1_a6j5t")
+
+[node name="icon" type="Sprite2D" parent="."]
+scale = Vector2(3.5, 3.5)
+texture = ExtResource("3_xqd5k")

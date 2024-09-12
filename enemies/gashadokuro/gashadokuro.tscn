@@ -1,0 +1,67 @@
+[gd_scene load_steps=7 format=3 uid="uid://d1rh2yck0drt7"]
+
+[ext_resource type="Script" path="res://enemies/gashadokuro/gashadokuro.gd" id="1_x6dwl"]
+[ext_resource type="Texture2D" uid="uid://fogjrttu3u4g" path="res://enemies/gashadokuro/gashadokuro_placeholder.png" id="1_yvmp4"]
+[ext_resource type="PackedScene" uid="uid://b7rr7bh3betwa" path="res://enemies/ui_elements.tscn" id="3_jjstj"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_2xpwv"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3746v"]
+radius = 51.0098
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6mnii"]
+radius = 14.0
+
+[node name="gashadokuro" type="RigidBody2D" groups=["enemy"]]
+process_mode = 1
+collision_layer = 6
+collision_mask = 0
+gravity_scale = 0.0
+lock_rotation = true
+script = ExtResource("1_x6dwl")
+
+[node name="attack_area" type="Area2D" parent="."]
+visible = false
+
+[node name="attack_vfx" type="Sprite2D" parent="attack_area"]
+position = Vector2(-11, -3.8147e-06)
+scale = Vector2(102, 102)
+texture = SubResource("PlaceholderTexture2D_2xpwv")
+
+[node name="attack_shape" type="CollisionShape2D" parent="attack_area"]
+position = Vector2(-11, 0)
+shape = SubResource("CircleShape2D_3746v")
+debug_color = Color(1, 0.0196078, 0, 0.419608)
+
+[node name="sprite" type="Sprite2D" parent="."]
+position = Vector2(0, -13)
+texture = ExtResource("1_yvmp4")
+
+[node name="collider" type="CollisionShape2D" parent="."]
+position = Vector2(2, -3)
+shape = SubResource("CircleShape2D_6mnii")
+
+[node name="nav_agent" type="NavigationAgent2D" parent="."]
+target_desired_distance = 50.0
+
+[node name="anim_timer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+autostart = true
+
+[node name="movement_anim_timer" type="Timer" parent="."]
+one_shot = true
+
+[node name="attack_timer" type="Timer" parent="."]
+wait_time = 0.2
+one_shot = true
+
+[node name="ui_elements" parent="." instance=ExtResource("3_jjstj")]
+offset_top = -52.0
+offset_bottom = 31.0
+
+[connection signal="enemy_killed" from="." to="." method="_on_enemy_killed"]
+[connection signal="body_entered" from="attack_area" to="." method="_on_attack_area_body_entered"]
+[connection signal="timeout" from="anim_timer" to="." method="_on_anim_timer_timeout"]
+[connection signal="timeout" from="movement_anim_timer" to="." method="_on_movement_anim_timer_timeout"]
+[connection signal="timeout" from="attack_timer" to="." method="_on_attack_timer_timeout"]

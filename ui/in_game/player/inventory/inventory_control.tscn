@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://di687tvmfy2p4"]
+
+[ext_resource type="Script" path="res://ui/in_game/player/inventory/power_up_control.gd" id="1_cg0et"]
+
+[node name="power_up_control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_cg0et")
+
+[node name="icon_button" type="TextureButton" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+button_mask = 0
+stretch_mode = 0
